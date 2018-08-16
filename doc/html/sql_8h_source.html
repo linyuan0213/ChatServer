@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ChatServer: Model/sql.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ChatServer
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_312950da3f243a51cc00f4a947545131.html">Model</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">sql.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="sql_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CHATSERVER_SQL_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CHATSERVER_SQL_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;mysql/mysql.h&gt;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="struct_mysql_con_info.html">   22</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="struct_mysql_con_info.html#a5f458c4d8ac0ac4d3678e0c75a276d62">   24</a></span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="struct_mysql_con_info.html#a5f458c4d8ac0ac4d3678e0c75a276d62">server</a>;    </div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="struct_mysql_con_info.html#a1ab421719b62ff1d9817fa2aa3047387">   25</a></span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="struct_mysql_con_info.html#a1ab421719b62ff1d9817fa2aa3047387">user</a>;      </div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="struct_mysql_con_info.html#af48005df83b3c677eb59ddd2f08b430c">   26</a></span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="struct_mysql_con_info.html#af48005df83b3c677eb59ddd2f08b430c">password</a>;  </div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_mysql_con_info.html#a3c1104ed92045712638c79909ce4b76d">   27</a></span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="struct_mysql_con_info.html#a3c1104ed92045712638c79909ce4b76d">database</a>;  </div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="struct_mysql_con_info.html#a177c6fe83cf3af7c91d3a106643aa026">   28</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_mysql_con_info.html#a177c6fe83cf3af7c91d3a106643aa026">port</a>;        </div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}<a class="code" href="struct_mysql_con_info.html">MysqlConInfo</a>;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_sql.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sql.html">Sql</a></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_sql.html#a51d808a87ef2d5fc8bebd282d426ea3b">Sql</a>();</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_sql.html#a51472ce351268f1b44f2002b11821823">~Sql</a>();</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">// 设置连接信息</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sql.html#a55a4e6107d72aba3888706a68bde7234">set_mysql_conn</a>(<span class="keywordtype">char</span>* server, <span class="keywordtype">char</span>* username, <span class="keywordtype">char</span>* password, <span class="keywordtype">char</span>* database, <span class="keywordtype">int</span> port);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_sql.html#a08c93d9c471f99f91e5abc04f17b23de">open</a>();  <span class="comment">// 打开连接</span></div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sql.html#ac1e7b45b93adb5c1824d52e841e61a1b">close</a>(); <span class="comment">// 关闭连接</span></div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// 读取数据</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_sql.html#aa09086f9377e4afb2ff0519c04c17308">select</a>(<span class="keyword">const</span> std::string&amp; query_str, std::vector&lt;std::vector&lt;std::string&gt; &gt;&amp; data);</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_sql.html#a1bf64ef4024538e3d1f6654630f58ed5">query</a>(<span class="keyword">const</span> std::string&amp; query_str);     <span class="comment">// 其他操作</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_sql.html#ab2fa63250bf04d69653113c68f51f5b3">get_insert_id</a>(<span class="keyword">const</span> std::string&amp; query_str);<span class="comment">// 插入并获取插入的ID,针对自动递增ID</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sql.html#abb24009b5cc31e39218ef1f622425b33">error_message</a>();        <span class="comment">// 错误消息</span></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_sql.html#a502af8e4c2b4f703fcd669947f00aaa8">   52</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_sql.html#a502af8e4c2b4f703fcd669947f00aaa8">error_num</a>;               </div><div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_sql.html#a272d35551f73cdd5b758476b4c5cd3bc">   53</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_sql.html#a272d35551f73cdd5b758476b4c5cd3bc">error_info</a>;       </div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="struct_mysql_con_info.html">MysqlConInfo</a> mysql_con_info;     </div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    MYSQL mysql_instance;        </div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    MYSQL_RES *result;           </div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif //CHATSERVER_SQL_H</span></div><div class="ttc" id="class_sql_html"><div class="ttname"><a href="class_sql.html">Sql</a></div><div class="ttdoc">mysql模块封装 </div><div class="ttdef"><b>Definition:</b> <a href="sql_8h_source.html#l00034">sql.h:34</a></div></div>
+<div class="ttc" id="class_sql_html_a08c93d9c471f99f91e5abc04f17b23de"><div class="ttname"><a href="class_sql.html#a08c93d9c471f99f91e5abc04f17b23de">Sql::open</a></div><div class="ttdeci">bool open()</div><div class="ttdoc">连接数据库 </div><div class="ttdef"><b>Definition:</b> <a href="sql_8cpp_source.html#l00050">sql.cpp:50</a></div></div>
+<div class="ttc" id="class_sql_html_a51d808a87ef2d5fc8bebd282d426ea3b"><div class="ttname"><a href="class_sql.html#a51d808a87ef2d5fc8bebd282d426ea3b">Sql::Sql</a></div><div class="ttdeci">Sql()</div><div class="ttdoc">构造函数,初始化error_num和error_info </div><div class="ttdef"><b>Definition:</b> <a href="sql_8cpp_source.html#l00011">sql.cpp:11</a></div></div>
+<div class="ttc" id="struct_mysql_con_info_html_a3c1104ed92045712638c79909ce4b76d"><div class="ttname"><a href="struct_mysql_con_info.html#a3c1104ed92045712638c79909ce4b76d">MysqlConInfo::database</a></div><div class="ttdeci">char * database</div><div class="ttdoc">连接的数据库 </div><div class="ttdef"><b>Definition:</b> <a href="sql_8h_source.html#l00027">sql.h:27</a></div></div>
+<div class="ttc" id="class_sql_html_ab2fa63250bf04d69653113c68f51f5b3"><div class="ttname"><a href="class_sql.html#ab2fa63250bf04d69653113c68f51f5b3">Sql::get_insert_id</a></div><div class="ttdeci">int get_insert_id(const std::string &amp;query_str)</div><div class="ttdoc">插入并获取id </div><div class="ttdef"><b>Definition:</b> <a href="sql_8cpp_source.html#l00141">sql.cpp:141</a></div></div>
+<div class="ttc" id="class_sql_html_a55a4e6107d72aba3888706a68bde7234"><div class="ttname"><a href="class_sql.html#a55a4e6107d72aba3888706a68bde7234">Sql::set_mysql_conn</a></div><div class="ttdeci">void set_mysql_conn(char *server, char *username, char *password, char *database, int port)</div><div class="ttdoc">设置连接信息 </div><div class="ttdef"><b>Definition:</b> <a href="sql_8cpp_source.html#l00037">sql.cpp:37</a></div></div>
+<div class="ttc" id="struct_mysql_con_info_html_a177c6fe83cf3af7c91d3a106643aa026"><div class="ttname"><a href="struct_mysql_con_info.html#a177c6fe83cf3af7c91d3a106643aa026">MysqlConInfo::port</a></div><div class="ttdeci">int port</div><div class="ttdoc">端口 </div><div class="ttdef"><b>Definition:</b> <a href="sql_8h_source.html#l00028">sql.h:28</a></div></div>
+<div class="ttc" id="class_sql_html_a51472ce351268f1b44f2002b11821823"><div class="ttname"><a href="class_sql.html#a51472ce351268f1b44f2002b11821823">Sql::~Sql</a></div><div class="ttdeci">~Sql()</div><div class="ttdoc">析构函数,关闭数据库连接 </div><div class="ttdef"><b>Definition:</b> <a href="sql_8cpp_source.html#l00024">sql.cpp:24</a></div></div>
+<div class="ttc" id="class_sql_html_abb24009b5cc31e39218ef1f622425b33"><div class="ttname"><a href="class_sql.html#abb24009b5cc31e39218ef1f622425b33">Sql::error_message</a></div><div class="ttdeci">void error_message()</div><div class="ttdoc">出错信息处理 </div><div class="ttdef"><b>Definition:</b> <a href="sql_8cpp_source.html#l00156">sql.cpp:156</a></div></div>
+<div class="ttc" id="class_sql_html_a502af8e4c2b4f703fcd669947f00aaa8"><div class="ttname"><a href="class_sql.html#a502af8e4c2b4f703fcd669947f00aaa8">Sql::error_num</a></div><div class="ttdeci">int error_num</div><div class="ttdoc">错误代号 </div><div class="ttdef"><b>Definition:</b> <a href="sql_8h_source.html#l00052">sql.h:52</a></div></div>
+<div class="ttc" id="class_sql_html_aa09086f9377e4afb2ff0519c04c17308"><div class="ttname"><a href="class_sql.html#aa09086f9377e4afb2ff0519c04c17308">Sql::select</a></div><div class="ttdeci">bool select(const std::string &amp;query_str, std::vector&lt; std::vector&lt; std::string &gt; &gt; &amp;data)</div><div class="ttdoc">查询数据库调用select等命令 </div><div class="ttdef"><b>Definition:</b> <a href="sql_8cpp_source.html#l00080">sql.cpp:80</a></div></div>
+<div class="ttc" id="struct_mysql_con_info_html_af48005df83b3c677eb59ddd2f08b430c"><div class="ttname"><a href="struct_mysql_con_info.html#af48005df83b3c677eb59ddd2f08b430c">MysqlConInfo::password</a></div><div class="ttdeci">char * password</div><div class="ttdoc">密码 </div><div class="ttdef"><b>Definition:</b> <a href="sql_8h_source.html#l00026">sql.h:26</a></div></div>
+<div class="ttc" id="class_sql_html_ac1e7b45b93adb5c1824d52e841e61a1b"><div class="ttname"><a href="class_sql.html#ac1e7b45b93adb5c1824d52e841e61a1b">Sql::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">关闭数据库连接 </div><div class="ttdef"><b>Definition:</b> <a href="sql_8cpp_source.html#l00068">sql.cpp:68</a></div></div>
+<div class="ttc" id="class_sql_html_a1bf64ef4024538e3d1f6654630f58ed5"><div class="ttname"><a href="class_sql.html#a1bf64ef4024538e3d1f6654630f58ed5">Sql::query</a></div><div class="ttdeci">bool query(const std::string &amp;query_str)</div><div class="ttdoc">调用update delete等命令 </div><div class="ttdef"><b>Definition:</b> <a href="sql_8cpp_source.html#l00126">sql.cpp:126</a></div></div>
+<div class="ttc" id="struct_mysql_con_info_html_a1ab421719b62ff1d9817fa2aa3047387"><div class="ttname"><a href="struct_mysql_con_info.html#a1ab421719b62ff1d9817fa2aa3047387">MysqlConInfo::user</a></div><div class="ttdeci">char * user</div><div class="ttdoc">用户名 </div><div class="ttdef"><b>Definition:</b> <a href="sql_8h_source.html#l00025">sql.h:25</a></div></div>
+<div class="ttc" id="struct_mysql_con_info_html"><div class="ttname"><a href="struct_mysql_con_info.html">MysqlConInfo</a></div><div class="ttdoc">数据库连接信息封装 </div><div class="ttdef"><b>Definition:</b> <a href="sql_8h_source.html#l00022">sql.h:22</a></div></div>
+<div class="ttc" id="struct_mysql_con_info_html_a5f458c4d8ac0ac4d3678e0c75a276d62"><div class="ttname"><a href="struct_mysql_con_info.html#a5f458c4d8ac0ac4d3678e0c75a276d62">MysqlConInfo::server</a></div><div class="ttdeci">char * server</div><div class="ttdoc">服务器ip </div><div class="ttdef"><b>Definition:</b> <a href="sql_8h_source.html#l00024">sql.h:24</a></div></div>
+<div class="ttc" id="class_sql_html_a272d35551f73cdd5b758476b4c5cd3bc"><div class="ttname"><a href="class_sql.html#a272d35551f73cdd5b758476b4c5cd3bc">Sql::error_info</a></div><div class="ttdeci">const char * error_info</div><div class="ttdoc">错误提示 </div><div class="ttdef"><b>Definition:</b> <a href="sql_8h_source.html#l00053">sql.h:53</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

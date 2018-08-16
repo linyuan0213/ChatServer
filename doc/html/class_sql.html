@@ -1,0 +1,544 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ChatServer: Sql类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ChatServer
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="class_sql-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">Sql类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>mysql模块封装  
+ <a href="class_sql.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="sql_8h_source.html">sql.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a51d808a87ef2d5fc8bebd282d426ea3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sql.html#a51d808a87ef2d5fc8bebd282d426ea3b">Sql</a> ()</td></tr>
+<tr class="memdesc:a51d808a87ef2d5fc8bebd282d426ea3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数,初始化error_num和error_info  <a href="#a51d808a87ef2d5fc8bebd282d426ea3b">更多...</a><br /></td></tr>
+<tr class="separator:a51d808a87ef2d5fc8bebd282d426ea3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51472ce351268f1b44f2002b11821823"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sql.html#a51472ce351268f1b44f2002b11821823">~Sql</a> ()</td></tr>
+<tr class="memdesc:a51472ce351268f1b44f2002b11821823"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数,关闭数据库连接  <a href="#a51472ce351268f1b44f2002b11821823">更多...</a><br /></td></tr>
+<tr class="separator:a51472ce351268f1b44f2002b11821823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55a4e6107d72aba3888706a68bde7234"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sql.html#a55a4e6107d72aba3888706a68bde7234">set_mysql_conn</a> (char *server, char *username, char *password, char *database, int port)</td></tr>
+<tr class="memdesc:a55a4e6107d72aba3888706a68bde7234"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置连接信息  <a href="#a55a4e6107d72aba3888706a68bde7234">更多...</a><br /></td></tr>
+<tr class="separator:a55a4e6107d72aba3888706a68bde7234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08c93d9c471f99f91e5abc04f17b23de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sql.html#a08c93d9c471f99f91e5abc04f17b23de">open</a> ()</td></tr>
+<tr class="memdesc:a08c93d9c471f99f91e5abc04f17b23de"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接数据库  <a href="#a08c93d9c471f99f91e5abc04f17b23de">更多...</a><br /></td></tr>
+<tr class="separator:a08c93d9c471f99f91e5abc04f17b23de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1e7b45b93adb5c1824d52e841e61a1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sql.html#ac1e7b45b93adb5c1824d52e841e61a1b">close</a> ()</td></tr>
+<tr class="memdesc:ac1e7b45b93adb5c1824d52e841e61a1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭数据库连接  <a href="#ac1e7b45b93adb5c1824d52e841e61a1b">更多...</a><br /></td></tr>
+<tr class="separator:ac1e7b45b93adb5c1824d52e841e61a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa09086f9377e4afb2ff0519c04c17308"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sql.html#aa09086f9377e4afb2ff0519c04c17308">select</a> (const std::string &amp;query_str, std::vector&lt; std::vector&lt; std::string &gt; &gt; &amp;data)</td></tr>
+<tr class="memdesc:aa09086f9377e4afb2ff0519c04c17308"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询数据库调用select等命令  <a href="#aa09086f9377e4afb2ff0519c04c17308">更多...</a><br /></td></tr>
+<tr class="separator:aa09086f9377e4afb2ff0519c04c17308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bf64ef4024538e3d1f6654630f58ed5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sql.html#a1bf64ef4024538e3d1f6654630f58ed5">query</a> (const std::string &amp;query_str)</td></tr>
+<tr class="memdesc:a1bf64ef4024538e3d1f6654630f58ed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">调用update delete等命令  <a href="#a1bf64ef4024538e3d1f6654630f58ed5">更多...</a><br /></td></tr>
+<tr class="separator:a1bf64ef4024538e3d1f6654630f58ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2fa63250bf04d69653113c68f51f5b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sql.html#ab2fa63250bf04d69653113c68f51f5b3">get_insert_id</a> (const std::string &amp;query_str)</td></tr>
+<tr class="memdesc:ab2fa63250bf04d69653113c68f51f5b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">插入并获取id  <a href="#ab2fa63250bf04d69653113c68f51f5b3">更多...</a><br /></td></tr>
+<tr class="separator:ab2fa63250bf04d69653113c68f51f5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb24009b5cc31e39218ef1f622425b33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sql.html#abb24009b5cc31e39218ef1f622425b33">error_message</a> ()</td></tr>
+<tr class="memdesc:abb24009b5cc31e39218ef1f622425b33"><td class="mdescLeft">&#160;</td><td class="mdescRight">出错信息处理  <a href="#abb24009b5cc31e39218ef1f622425b33">更多...</a><br /></td></tr>
+<tr class="separator:abb24009b5cc31e39218ef1f622425b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a502af8e4c2b4f703fcd669947f00aaa8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sql.html#a502af8e4c2b4f703fcd669947f00aaa8">error_num</a></td></tr>
+<tr class="memdesc:a502af8e4c2b4f703fcd669947f00aaa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">错误代号  <a href="#a502af8e4c2b4f703fcd669947f00aaa8">更多...</a><br /></td></tr>
+<tr class="separator:a502af8e4c2b4f703fcd669947f00aaa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a272d35551f73cdd5b758476b4c5cd3bc"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sql.html#a272d35551f73cdd5b758476b4c5cd3bc">error_info</a></td></tr>
+<tr class="memdesc:a272d35551f73cdd5b758476b4c5cd3bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">错误提示  <a href="#a272d35551f73cdd5b758476b4c5cd3bc">更多...</a><br /></td></tr>
+<tr class="separator:a272d35551f73cdd5b758476b4c5cd3bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>mysql模块封装 </p>
+
+<p class="definition">在文件 <a class="el" href="sql_8h_source.html">sql.h</a> 第 <a class="el" href="sql_8h_source.html#l00034">34</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a51d808a87ef2d5fc8bebd282d426ea3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51d808a87ef2d5fc8bebd282d426ea3b">&#9670;&nbsp;</a></span>Sql()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sql::Sql </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造函数,初始化error_num和error_info </p>
+
+<p class="definition">在文件 <a class="el" href="sql_8cpp_source.html">sql.cpp</a> 第 <a class="el" href="sql_8cpp_source.html#l00011">11</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a51472ce351268f1b44f2002b11821823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51472ce351268f1b44f2002b11821823">&#9670;&nbsp;</a></span>~Sql()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sql::~Sql </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>析构函数,关闭数据库连接 </p>
+
+<p class="definition">在文件 <a class="el" href="sql_8cpp_source.html">sql.cpp</a> 第 <a class="el" href="sql_8cpp_source.html#l00024">24</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_sql_a51472ce351268f1b44f2002b11821823_cgraph.png" border="0" usemap="#class_sql_a51472ce351268f1b44f2002b11821823_cgraph" alt=""/></div>
+<map name="class_sql_a51472ce351268f1b44f2002b11821823_cgraph" id="class_sql_a51472ce351268f1b44f2002b11821823_cgraph">
+<area shape="rect" id="node2" href="class_sql.html#ac1e7b45b93adb5c1824d52e841e61a1b" title="关闭数据库连接 " alt="" coords="135,5,219,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ac1e7b45b93adb5c1824d52e841e61a1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1e7b45b93adb5c1824d52e841e61a1b">&#9670;&nbsp;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sql::close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>关闭数据库连接 </p>
+
+<p class="definition">在文件 <a class="el" href="sql_8cpp_source.html">sql.cpp</a> 第 <a class="el" href="sql_8cpp_source.html#l00068">68</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_sql_ac1e7b45b93adb5c1824d52e841e61a1b_icgraph.png" border="0" usemap="#class_sql_ac1e7b45b93adb5c1824d52e841e61a1b_icgraph" alt=""/></div>
+<map name="class_sql_ac1e7b45b93adb5c1824d52e841e61a1b_icgraph" id="class_sql_ac1e7b45b93adb5c1824d52e841e61a1b_icgraph">
+<area shape="rect" id="node2" href="class_sql.html#a51472ce351268f1b44f2002b11821823" title="析构函数,关闭数据库连接 " alt="" coords="137,5,219,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abb24009b5cc31e39218ef1f622425b33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb24009b5cc31e39218ef1f622425b33">&#9670;&nbsp;</a></span>error_message()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sql::error_message </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>出错信息处理 </p>
+
+<p class="definition">在文件 <a class="el" href="sql_8cpp_source.html">sql.cpp</a> 第 <a class="el" href="sql_8cpp_source.html#l00156">156</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_sql_abb24009b5cc31e39218ef1f622425b33_icgraph.png" border="0" usemap="#class_sql_abb24009b5cc31e39218ef1f622425b33_icgraph" alt=""/></div>
+<map name="class_sql_abb24009b5cc31e39218ef1f622425b33_icgraph" id="class_sql_abb24009b5cc31e39218ef1f622425b33_icgraph">
+<area shape="rect" id="node2" href="class_sql.html#a08c93d9c471f99f91e5abc04f17b23de" title="连接数据库 " alt="" coords="203,56,286,83"/>
+<area shape="rect" id="node7" href="class_sql.html#aa09086f9377e4afb2ff0519c04c17308" title="查询数据库调用select等命令 " alt="" coords="200,107,289,133"/>
+<area shape="rect" id="node8" href="class_sql.html#a1bf64ef4024538e3d1f6654630f58ed5" title="调用update delete等命令 " alt="" coords="201,157,288,184"/>
+<area shape="rect" id="node9" href="class_sql.html#ab2fa63250bf04d69653113c68f51f5b3" title="插入并获取id " alt="" coords="342,208,477,235"/>
+<area shape="rect" id="node3" href="class_add_friend.html#a3821e7a66de91eaa8e7c3aef5a459d36" title="将添加好友插入数据库,ispassed为0 " alt="" coords="337,157,481,184"/>
+<area shape="rect" id="node4" href="class_get_list.html#ac6a61f033816670c48056f9b061083aa" title="通过json包返回好友列表 " alt="" coords="346,56,473,83"/>
+<area shape="rect" id="node5" href="class_login.html#a9499c00f992f00ec1ffe3c6eaf1db954" title="Login::process" alt="" coords="352,5,467,32"/>
+<area shape="rect" id="node6" href="class_register.html#aa2de75dc60545138107d0710fcccf095" title="注册用户 " alt="" coords="343,107,476,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab2fa63250bf04d69653113c68f51f5b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2fa63250bf04d69653113c68f51f5b3">&#9670;&nbsp;</a></span>get_insert_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Sql::get_insert_id </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>query_str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>插入并获取id </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">query_str</td><td>查询命令 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回true </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="sql_8cpp_source.html">sql.cpp</a> 第 <a class="el" href="sql_8cpp_source.html#l00141">141</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_sql_ab2fa63250bf04d69653113c68f51f5b3_cgraph.png" border="0" usemap="#class_sql_ab2fa63250bf04d69653113c68f51f5b3_cgraph" alt=""/></div>
+<map name="class_sql_ab2fa63250bf04d69653113c68f51f5b3_cgraph" id="class_sql_ab2fa63250bf04d69653113c68f51f5b3_cgraph">
+<area shape="rect" id="node2" href="class_sql.html#a1bf64ef4024538e3d1f6654630f58ed5" title="调用update delete等命令 " alt="" coords="188,5,275,32"/>
+<area shape="rect" id="node3" href="class_sql.html#abb24009b5cc31e39218ef1f622425b33" title="出错信息处理 " alt="" coords="323,31,469,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a08c93d9c471f99f91e5abc04f17b23de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08c93d9c471f99f91e5abc04f17b23de">&#9670;&nbsp;</a></span>open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Sql::open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>连接数据库 </p>
+
+<p class="definition">在文件 <a class="el" href="sql_8cpp_source.html">sql.cpp</a> 第 <a class="el" href="sql_8cpp_source.html#l00050">50</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_sql_a08c93d9c471f99f91e5abc04f17b23de_cgraph.png" border="0" usemap="#class_sql_a08c93d9c471f99f91e5abc04f17b23de_cgraph" alt=""/></div>
+<map name="class_sql_a08c93d9c471f99f91e5abc04f17b23de_cgraph" id="class_sql_a08c93d9c471f99f91e5abc04f17b23de_cgraph">
+<area shape="rect" id="node2" href="class_sql.html#abb24009b5cc31e39218ef1f622425b33" title="出错信息处理 " alt="" coords="136,5,283,32"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_sql_a08c93d9c471f99f91e5abc04f17b23de_icgraph.png" border="0" usemap="#class_sql_a08c93d9c471f99f91e5abc04f17b23de_icgraph" alt=""/></div>
+<map name="class_sql_a08c93d9c471f99f91e5abc04f17b23de_icgraph" id="class_sql_a08c93d9c471f99f91e5abc04f17b23de_icgraph">
+<area shape="rect" id="node2" href="class_add_friend.html#a3821e7a66de91eaa8e7c3aef5a459d36" title="将添加好友插入数据库,ispassed为0 " alt="" coords="136,5,280,32"/>
+<area shape="rect" id="node3" href="class_get_list.html#ac6a61f033816670c48056f9b061083aa" title="通过json包返回好友列表 " alt="" coords="145,56,271,83"/>
+<area shape="rect" id="node4" href="class_login.html#a9499c00f992f00ec1ffe3c6eaf1db954" title="Login::process" alt="" coords="151,107,265,133"/>
+<area shape="rect" id="node5" href="class_register.html#aa2de75dc60545138107d0710fcccf095" title="注册用户 " alt="" coords="141,157,275,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1bf64ef4024538e3d1f6654630f58ed5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bf64ef4024538e3d1f6654630f58ed5">&#9670;&nbsp;</a></span>query()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Sql::query </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>query_str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>调用update delete等命令 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">query_str</td><td>查询命令 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回true </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="sql_8cpp_source.html">sql.cpp</a> 第 <a class="el" href="sql_8cpp_source.html#l00126">126</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_sql_a1bf64ef4024538e3d1f6654630f58ed5_cgraph.png" border="0" usemap="#class_sql_a1bf64ef4024538e3d1f6654630f58ed5_cgraph" alt=""/></div>
+<map name="class_sql_a1bf64ef4024538e3d1f6654630f58ed5_cgraph" id="class_sql_a1bf64ef4024538e3d1f6654630f58ed5_cgraph">
+<area shape="rect" id="node2" href="class_sql.html#abb24009b5cc31e39218ef1f622425b33" title="出错信息处理 " alt="" coords="140,5,287,32"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_sql_a1bf64ef4024538e3d1f6654630f58ed5_icgraph.png" border="0" usemap="#class_sql_a1bf64ef4024538e3d1f6654630f58ed5_icgraph" alt=""/></div>
+<map name="class_sql_a1bf64ef4024538e3d1f6654630f58ed5_icgraph" id="class_sql_a1bf64ef4024538e3d1f6654630f58ed5_icgraph">
+<area shape="rect" id="node2" href="class_sql.html#ab2fa63250bf04d69653113c68f51f5b3" title="插入并获取id " alt="" coords="145,5,279,32"/>
+<area shape="rect" id="node3" href="class_add_friend.html#a3821e7a66de91eaa8e7c3aef5a459d36" title="将添加好友插入数据库,ispassed为0 " alt="" coords="140,56,284,83"/>
+<area shape="rect" id="node4" href="class_register.html#aa2de75dc60545138107d0710fcccf095" title="注册用户 " alt="" coords="145,107,279,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa09086f9377e4afb2ff0519c04c17308"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa09086f9377e4afb2ff0519c04c17308">&#9670;&nbsp;</a></span>select()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Sql::select </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>query_str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; std::string &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>查询数据库调用select等命令 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">query_str</td><td>查询命令 </td></tr>
+    <tr><td class="paramname">data</td><td>查询结果 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回true </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>需要调用mysql_store_result存储数据 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="sql_8cpp_source.html">sql.cpp</a> 第 <a class="el" href="sql_8cpp_source.html#l00080">80</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_sql_aa09086f9377e4afb2ff0519c04c17308_cgraph.png" border="0" usemap="#class_sql_aa09086f9377e4afb2ff0519c04c17308_cgraph" alt=""/></div>
+<map name="class_sql_aa09086f9377e4afb2ff0519c04c17308_cgraph" id="class_sql_aa09086f9377e4afb2ff0519c04c17308_cgraph">
+<area shape="rect" id="node2" href="class_sql.html#abb24009b5cc31e39218ef1f622425b33" title="出错信息处理 " alt="" coords="143,5,289,32"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_sql_aa09086f9377e4afb2ff0519c04c17308_icgraph.png" border="0" usemap="#class_sql_aa09086f9377e4afb2ff0519c04c17308_icgraph" alt=""/></div>
+<map name="class_sql_aa09086f9377e4afb2ff0519c04c17308_icgraph" id="class_sql_aa09086f9377e4afb2ff0519c04c17308_icgraph">
+<area shape="rect" id="node2" href="class_add_friend.html#a3821e7a66de91eaa8e7c3aef5a459d36" title="将添加好友插入数据库,ispassed为0 " alt="" coords="143,5,287,32"/>
+<area shape="rect" id="node3" href="class_get_list.html#ac6a61f033816670c48056f9b061083aa" title="通过json包返回好友列表 " alt="" coords="151,56,278,83"/>
+<area shape="rect" id="node4" href="class_login.html#a9499c00f992f00ec1ffe3c6eaf1db954" title="Login::process" alt="" coords="157,107,272,133"/>
+<area shape="rect" id="node5" href="class_register.html#aa2de75dc60545138107d0710fcccf095" title="注册用户 " alt="" coords="148,157,281,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a55a4e6107d72aba3888706a68bde7234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55a4e6107d72aba3888706a68bde7234">&#9670;&nbsp;</a></span>set_mysql_conn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sql::set_mysql_conn </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>server</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>password</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>database</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置连接信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">server</td><td>服务器ip </td></tr>
+    <tr><td class="paramname">username</td><td>用户名 </td></tr>
+    <tr><td class="paramname">password</td><td>密码 </td></tr>
+    <tr><td class="paramname">database</td><td>连接的数据库 </td></tr>
+    <tr><td class="paramname">port</td><td>端口号,0为默认 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="sql_8cpp_source.html">sql.cpp</a> 第 <a class="el" href="sql_8cpp_source.html#l00037">37</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_sql_a55a4e6107d72aba3888706a68bde7234_icgraph.png" border="0" usemap="#class_sql_a55a4e6107d72aba3888706a68bde7234_icgraph" alt=""/></div>
+<map name="class_sql_a55a4e6107d72aba3888706a68bde7234_icgraph" id="class_sql_a55a4e6107d72aba3888706a68bde7234_icgraph">
+<area shape="rect" id="node2" href="class_add_friend.html#a3821e7a66de91eaa8e7c3aef5a459d36" title="将添加好友插入数据库,ispassed为0 " alt="" coords="208,5,352,32"/>
+<area shape="rect" id="node3" href="class_get_list.html#ac6a61f033816670c48056f9b061083aa" title="通过json包返回好友列表 " alt="" coords="217,56,343,83"/>
+<area shape="rect" id="node4" href="class_login.html#a9499c00f992f00ec1ffe3c6eaf1db954" title="Login::process" alt="" coords="223,107,337,133"/>
+<area shape="rect" id="node5" href="class_register.html#aa2de75dc60545138107d0710fcccf095" title="注册用户 " alt="" coords="213,157,347,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a272d35551f73cdd5b758476b4c5cd3bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a272d35551f73cdd5b758476b4c5cd3bc">&#9670;&nbsp;</a></span>error_info</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* Sql::error_info</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>错误提示 </p>
+
+<p class="definition">在文件 <a class="el" href="sql_8h_source.html">sql.h</a> 第 <a class="el" href="sql_8h_source.html#l00053">53</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a502af8e4c2b4f703fcd669947f00aaa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a502af8e4c2b4f703fcd669947f00aaa8">&#9670;&nbsp;</a></span>error_num</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Sql::error_num</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>错误代号 </p>
+
+<p class="definition">在文件 <a class="el" href="sql_8h_source.html">sql.h</a> 第 <a class="el" href="sql_8h_source.html#l00052">52</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Model/<a class="el" href="sql_8h_source.html">sql.h</a></li>
+<li>Model/<a class="el" href="sql_8cpp_source.html">sql.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

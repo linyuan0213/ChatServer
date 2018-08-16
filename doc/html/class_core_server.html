@@ -1,0 +1,664 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ChatServer: CoreServer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ChatServer
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="class_core_server-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">CoreServer类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>核心类,创建多线程libevent主框架  
+ <a href="class_core_server.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="server_8h_source.html">server.h</a>&gt;</code></p>
+<div class="dynheader">
+类 CoreServer 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_core_server__inherit__graph.png" border="0" usemap="#_core_server_inherit__map" alt="Inheritance graph"/></div>
+<map name="_core_server_inherit__map" id="_core_server_inherit__map">
+<area shape="rect" id="node2" href="class_test_server.html" title="TestServer" alt="" coords="7,80,98,107"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae698a529511ede927685ad2e25a58747"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core_server.html#ae698a529511ede927685ad2e25a58747">CoreServer</a> (int count)</td></tr>
+<tr class="memdesc:ae698a529511ede927685ad2e25a58747"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化LibeventThread  <a href="#ae698a529511ede927685ad2e25a58747">更多...</a><br /></td></tr>
+<tr class="separator:ae698a529511ede927685ad2e25a58747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a529730181ad993d8d0e6cce7ddd79d67"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core_server.html#a529730181ad993d8d0e6cce7ddd79d67">~CoreServer</a> ()</td></tr>
+<tr class="memdesc:a529730181ad993d8d0e6cce7ddd79d67"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放LibeventThread内存  <a href="#a529730181ad993d8d0e6cce7ddd79d67">更多...</a><br /></td></tr>
+<tr class="separator:a529730181ad993d8d0e6cce7ddd79d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e6b041b002757bd5c0af36c1a445bb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core_server.html#a3e6b041b002757bd5c0af36c1a445bb3">set_port</a> (int por)</td></tr>
+<tr class="memdesc:a3e6b041b002757bd5c0af36c1a445bb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置端口  <a href="#a3e6b041b002757bd5c0af36c1a445bb3">更多...</a><br /></td></tr>
+<tr class="separator:a3e6b041b002757bd5c0af36c1a445bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60d6baf813639950ecf790fe7799c10a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core_server.html#a60d6baf813639950ecf790fe7799c10a">start_run</a> ()</td></tr>
+<tr class="memdesc:a60d6baf813639950ecf790fe7799c10a"><td class="mdescLeft">&#160;</td><td class="mdescRight">开始监听, 有客户端连接,通知子线程,子线程工作  <a href="#a60d6baf813639950ecf790fe7799c10a">更多...</a><br /></td></tr>
+<tr class="separator:a60d6baf813639950ecf790fe7799c10a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c166f21bda1ebf743eef1ca6b1481d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core_server.html#a5c166f21bda1ebf743eef1ca6b1481d4">stop_run</a> (timeval *tv)</td></tr>
+<tr class="memdesc:a5c166f21bda1ebf743eef1ca6b1481d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止运行  <a href="#a5c166f21bda1ebf743eef1ca6b1481d4">更多...</a><br /></td></tr>
+<tr class="separator:a5c166f21bda1ebf743eef1ca6b1481d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1666bf737958be799a008287dd4bb662"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core_server.html#a1666bf737958be799a008287dd4bb662">add_signal_event</a> (int sig, void(*ptr)(int, short, void *))</td></tr>
+<tr class="memdesc:a1666bf737958be799a008287dd4bb662"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册信号  <a href="#a1666bf737958be799a008287dd4bb662">更多...</a><br /></td></tr>
+<tr class="separator:a1666bf737958be799a008287dd4bb662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa22b5088db38dc518bfbf76136c04720"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core_server.html#aa22b5088db38dc518bfbf76136c04720">delete_signal_event</a> (int sig)</td></tr>
+<tr class="memdesc:aa22b5088db38dc518bfbf76136c04720"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除信号  <a href="#aa22b5088db38dc518bfbf76136c04720">更多...</a><br /></td></tr>
+<tr class="separator:aa22b5088db38dc518bfbf76136c04720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba84ef629144afa433544a1990d887a6"><td class="memItemLeft" align="right" valign="top">event *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core_server.html#aba84ef629144afa433544a1990d887a6">add_timer_event</a> (void(*ptr)(int, short, void *), timeval tv, bool once)</td></tr>
+<tr class="separator:aba84ef629144afa433544a1990d887a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1754df7a1157143508ff3ccd6c2a788b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core_server.html#a1754df7a1157143508ff3ccd6c2a788b">delete_timer_event</a> (event *ev)</td></tr>
+<tr class="memdesc:a1754df7a1157143508ff3ccd6c2a788b"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除定时器时间  <a href="#a1754df7a1157143508ff3ccd6c2a788b">更多...</a><br /></td></tr>
+<tr class="separator:a1754df7a1157143508ff3ccd6c2a788b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a56126f237577a7d6bf295ab366726f2d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core_server.html#a56126f237577a7d6bf295ab366726f2d">connect_cb</a> (<a class="el" href="class_conn.html">Conn</a> *conn)</td></tr>
+<tr class="memdesc:a56126f237577a7d6bf295ab366726f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">需要重写,新建连接成功后，调用该函数  <a href="#a56126f237577a7d6bf295ab366726f2d">更多...</a><br /></td></tr>
+<tr class="separator:a56126f237577a7d6bf295ab366726f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad36232ab25faab731d7d46268361701c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core_server.html#ad36232ab25faab731d7d46268361701c">read_cb</a> (<a class="el" href="class_conn.html">Conn</a> *conn)</td></tr>
+<tr class="memdesc:ad36232ab25faab731d7d46268361701c"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取完数据后，调用该函数  <a href="#ad36232ab25faab731d7d46268361701c">更多...</a><br /></td></tr>
+<tr class="separator:ad36232ab25faab731d7d46268361701c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2c7ba533cf810417b5a44892bb73d18"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core_server.html#ac2c7ba533cf810417b5a44892bb73d18">write_cb</a> (<a class="el" href="class_conn.html">Conn</a> *conn)</td></tr>
+<tr class="memdesc:ac2c7ba533cf810417b5a44892bb73d18"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送完数据后，调用该函数  <a href="#ac2c7ba533cf810417b5a44892bb73d18">更多...</a><br /></td></tr>
+<tr class="separator:ac2c7ba533cf810417b5a44892bb73d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accd5c3ab54b3ffe0edd50db590597e0c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core_server.html#accd5c3ab54b3ffe0edd50db590597e0c">close_cb</a> (<a class="el" href="class_conn.html">Conn</a> *conn, short events)</td></tr>
+<tr class="memdesc:accd5c3ab54b3ffe0edd50db590597e0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">断开连接，调用该函数  <a href="#accd5c3ab54b3ffe0edd50db590597e0c">更多...</a><br /></td></tr>
+<tr class="separator:accd5c3ab54b3ffe0edd50db590597e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>核心类,创建多线程libevent主框架 </p>
+
+<p class="definition">在文件 <a class="el" href="server_8h_source.html">server.h</a> 第 <a class="el" href="server_8h_source.html#l00113">113</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ae698a529511ede927685ad2e25a58747"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae698a529511ede927685ad2e25a58747">&#9670;&nbsp;</a></span>CoreServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CoreServer::CoreServer </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初始化LibeventThread </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>连接池大小 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="server_8cpp_source.html">server.cpp</a> 第 <a class="el" href="server_8cpp_source.html#l00010">10</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a529730181ad993d8d0e6cce7ddd79d67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a529730181ad993d8d0e6cce7ddd79d67">&#9670;&nbsp;</a></span>~CoreServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CoreServer::~CoreServer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>释放LibeventThread内存 </p>
+
+<p class="definition">在文件 <a class="el" href="server_8cpp_source.html">server.cpp</a> 第 <a class="el" href="server_8cpp_source.html#l00034">34</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_core_server_a529730181ad993d8d0e6cce7ddd79d67_cgraph.png" border="0" usemap="#class_core_server_a529730181ad993d8d0e6cce7ddd79d67_cgraph" alt=""/></div>
+<map name="class_core_server_a529730181ad993d8d0e6cce7ddd79d67_cgraph" id="class_core_server_a529730181ad993d8d0e6cce7ddd79d67_cgraph">
+<area shape="rect" id="node2" href="class_core_server.html#a5c166f21bda1ebf743eef1ca6b1481d4" title="停止运行 " alt="" coords="239,5,397,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a1666bf737958be799a008287dd4bb662"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1666bf737958be799a008287dd4bb662">&#9670;&nbsp;</a></span>add_signal_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CoreServer::add_signal_event </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(int, short, void *)&#160;</td>
+          <td class="paramname"><em>ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>注册信号 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sig</td><td>信号number </td></tr>
+    <tr><td class="paramname">ptr</td><td>信号处理函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回true </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="server_8cpp_source.html">server.cpp</a> 第 <a class="el" href="server_8cpp_source.html#l00284">284</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_core_server_a1666bf737958be799a008287dd4bb662_cgraph.png" border="0" usemap="#class_core_server_a1666bf737958be799a008287dd4bb662_cgraph" alt=""/></div>
+<map name="class_core_server_a1666bf737958be799a008287dd4bb662_cgraph" id="class_core_server_a1666bf737958be799a008287dd4bb662_cgraph">
+<area shape="rect" id="node2" href="class_core_server.html#aa22b5088db38dc518bfbf76136c04720" title="删除信号 " alt="" coords="225,5,368,47"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_core_server_a1666bf737958be799a008287dd4bb662_icgraph.png" border="0" usemap="#class_core_server_a1666bf737958be799a008287dd4bb662_icgraph" alt=""/></div>
+<map name="class_core_server_a1666bf737958be799a008287dd4bb662_icgraph" id="class_core_server_a1666bf737958be799a008287dd4bb662_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="225,13,280,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aba84ef629144afa433544a1990d887a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba84ef629144afa433544a1990d887a6">&#9670;&nbsp;</a></span>add_timer_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">event * CoreServer::add_timer_event </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(int, short, void *)&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">timeval&#160;</td>
+          <td class="paramname"><em>tv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>once</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>注册定时器事件 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>定时器处理函数 </td></tr>
+    <tr><td class="paramname">tv</td><td>溢出时间 </td></tr>
+    <tr><td class="paramname">once</td><td>是否执行一次 true表示一次 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功,返回定时器事件 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="server_8cpp_source.html">server.cpp</a> 第 <a class="el" href="server_8cpp_source.html#l00326">326</a> 行定义.</p>
+
+</div>
+</div>
+<a id="accd5c3ab54b3ffe0edd50db590597e0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accd5c3ab54b3ffe0edd50db590597e0c">&#9670;&nbsp;</a></span>close_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void CoreServer::close_cb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_conn.html">Conn</a> *&#160;</td>
+          <td class="paramname"><em>conn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>events</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>断开连接，调用该函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>客户端连接信息 </td></tr>
+    <tr><td class="paramname">events</td><td>关闭连接事件 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>被 <a class="el" href="class_test_server.html#a3a0371e7fb9087e03841ff9dd3590d1b">TestServer</a> 重载.</p>
+
+<p class="definition">在文件 <a class="el" href="server_8h_source.html">server.h</a> 第 <a class="el" href="server_8h_source.html#l00166">166</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a56126f237577a7d6bf295ab366726f2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56126f237577a7d6bf295ab366726f2d">&#9670;&nbsp;</a></span>connect_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void CoreServer::connect_cb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_conn.html">Conn</a> *&#160;</td>
+          <td class="paramname"><em>conn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>需要重写,新建连接成功后，调用该函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>客户端连接信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>被 <a class="el" href="class_test_server.html#a89534a45f8a09b731083e808399a2cb2">TestServer</a> 重载.</p>
+
+<p class="definition">在文件 <a class="el" href="server_8h_source.html">server.h</a> 第 <a class="el" href="server_8h_source.html#l00147">147</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aa22b5088db38dc518bfbf76136c04720"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa22b5088db38dc518bfbf76136c04720">&#9670;&nbsp;</a></span>delete_signal_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CoreServer::delete_signal_event </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sig</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除信号 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sig</td><td>信号number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回true </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="server_8cpp_source.html">server.cpp</a> 第 <a class="el" href="server_8cpp_source.html#l00310">310</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_core_server_aa22b5088db38dc518bfbf76136c04720_icgraph.png" border="0" usemap="#class_core_server_aa22b5088db38dc518bfbf76136c04720_icgraph" alt=""/></div>
+<map name="class_core_server_aa22b5088db38dc518bfbf76136c04720_icgraph" id="class_core_server_aa22b5088db38dc518bfbf76136c04720_icgraph">
+<area shape="rect" id="node2" href="class_core_server.html#a1666bf737958be799a008287dd4bb662" title="注册信号 " alt="" coords="196,5,368,47"/>
+<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="416,13,471,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1754df7a1157143508ff3ccd6c2a788b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1754df7a1157143508ff3ccd6c2a788b">&#9670;&nbsp;</a></span>delete_timer_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CoreServer::delete_timer_event </td>
+          <td>(</td>
+          <td class="paramtype">event *&#160;</td>
+          <td class="paramname"><em>ev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除定时器时间 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ev</td><td>定时器事件 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回true </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="server_8cpp_source.html">server.cpp</a> 第 <a class="el" href="server_8cpp_source.html#l00347">347</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad36232ab25faab731d7d46268361701c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad36232ab25faab731d7d46268361701c">&#9670;&nbsp;</a></span>read_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void CoreServer::read_cb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_conn.html">Conn</a> *&#160;</td>
+          <td class="paramname"><em>conn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>读取完数据后，调用该函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>客户端连接信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>被 <a class="el" href="class_test_server.html#a944d86c040467efd07d6348259f9445b">TestServer</a> 重载.</p>
+
+<p class="definition">在文件 <a class="el" href="server_8h_source.html">server.h</a> 第 <a class="el" href="server_8h_source.html#l00153">153</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a3e6b041b002757bd5c0af36c1a445bb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e6b041b002757bd5c0af36c1a445bb3">&#9670;&nbsp;</a></span>set_port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CoreServer::set_port </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置端口 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>端口号 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="server_8cpp_source.html">server.cpp</a> 第 <a class="el" href="server_8cpp_source.html#l00051">51</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_core_server_a3e6b041b002757bd5c0af36c1a445bb3_icgraph.png" border="0" usemap="#class_core_server_a3e6b041b002757bd5c0af36c1a445bb3_icgraph" alt=""/></div>
+<map name="class_core_server_a3e6b041b002757bd5c0af36c1a445bb3_icgraph" id="class_core_server_a3e6b041b002757bd5c0af36c1a445bb3_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="208,5,263,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a60d6baf813639950ecf790fe7799c10a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60d6baf813639950ecf790fe7799c10a">&#9670;&nbsp;</a></span>start_run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CoreServer::start_run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>开始监听, 有客户端连接,通知子线程,子线程工作 </p>
+
+<p class="definition">在文件 <a class="el" href="server_8cpp_source.html">server.cpp</a> 第 <a class="el" href="server_8cpp_source.html#l00107">107</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_core_server_a60d6baf813639950ecf790fe7799c10a_cgraph.png" border="0" usemap="#class_core_server_a60d6baf813639950ecf790fe7799c10a_cgraph" alt=""/></div>
+<map name="class_core_server_a60d6baf813639950ecf790fe7799c10a_cgraph" id="class_core_server_a60d6baf813639950ecf790fe7799c10a_cgraph">
+<area shape="rect" id="node2" href="class_thread_pool.html#ac05b2bc822301c8b4c4a93743a97ff41" title="添加线程 " alt="" coords="213,5,372,32"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_core_server_a60d6baf813639950ecf790fe7799c10a_icgraph.png" border="0" usemap="#class_core_server_a60d6baf813639950ecf790fe7799c10a_icgraph" alt=""/></div>
+<map name="class_core_server_a60d6baf813639950ecf790fe7799c10a_icgraph" id="class_core_server_a60d6baf813639950ecf790fe7799c10a_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="213,5,268,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5c166f21bda1ebf743eef1ca6b1481d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c166f21bda1ebf743eef1ca6b1481d4">&#9670;&nbsp;</a></span>stop_run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CoreServer::stop_run </td>
+          <td>(</td>
+          <td class="paramtype">timeval *&#160;</td>
+          <td class="paramname"><em>tv</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>停止运行 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tv</td><td>时间间隔,多长时间后结束 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="server_8cpp_source.html">server.cpp</a> 第 <a class="el" href="server_8cpp_source.html#l00156">156</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_core_server_a5c166f21bda1ebf743eef1ca6b1481d4_icgraph.png" border="0" usemap="#class_core_server_a5c166f21bda1ebf743eef1ca6b1481d4_icgraph" alt=""/></div>
+<map name="class_core_server_a5c166f21bda1ebf743eef1ca6b1481d4_icgraph" id="class_core_server_a5c166f21bda1ebf743eef1ca6b1481d4_icgraph">
+<area shape="rect" id="node2" href="class_test_server.html#a1bf33220a26de62ebfcdc9c0f4af483b" title="信号处理函数,Ctrl+C 后丢调用该函数,终止服务器 " alt="" coords="232,5,377,32"/>
+<area shape="rect" id="node4" href="class_core_server.html#a529730181ad993d8d0e6cce7ddd79d67" title="释放LibeventThread内存 " alt="" coords="212,56,397,83"/>
+<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="445,5,500,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac2c7ba533cf810417b5a44892bb73d18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2c7ba533cf810417b5a44892bb73d18">&#9670;&nbsp;</a></span>write_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void CoreServer::write_cb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_conn.html">Conn</a> *&#160;</td>
+          <td class="paramname"><em>conn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>发送完数据后，调用该函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>客户端连接信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>被 <a class="el" href="class_test_server.html#aed417fe8af10397f9c0952f67b11ef83">TestServer</a> 重载.</p>
+
+<p class="definition">在文件 <a class="el" href="server_8h_source.html">server.h</a> 第 <a class="el" href="server_8h_source.html#l00159">159</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>MultServer/<a class="el" href="server_8h_source.html">server.h</a></li>
+<li>MultServer/<a class="el" href="server_8cpp_source.html">server.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

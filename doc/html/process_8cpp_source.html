@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ChatServer: Control/process.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ChatServer
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_2b2a566a879c85564d3355c24cbe6a8a.html">Control</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">process.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="process_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="process_8h.html">process.h</a>&quot;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../Views/login.h&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../Views/register.h&quot;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../Views/getlist.h&quot;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../Views/sendmessages.h&quot;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../Views/getmessage.h&quot;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../Views/addfriend.h&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../Views/handlefriendrequest.h&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../Views/chatdefine.h&quot;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_process.html#a82ac8fbe893221ce72fbc0addda15f62">   18</a></span>&#160;std::string <a class="code" href="class_process.html#a82ac8fbe893221ce72fbc0addda15f62">Process::handle</a>(std::string json)</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">if</span>(json.empty())</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;error&quot;</span>;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    Json::Value json_root;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    json_root.clear();</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    Json::CharReaderBuilder builder;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    Json::CharReader *reader = builder.newCharReader();</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    JSONCPP_STRING err;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (!reader-&gt;parse(json.data(), json.data() + json.size(), &amp;json_root, &amp;err))</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;error&quot;</span>;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">int</span> type = json_root[<span class="stringliteral">&quot;reason_type&quot;</span>].asInt();</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">auto</span> it = <a class="code" href="class_process.html#a82ea7905a614d62a55887c19ac197d2d">chat_map</a>.find(type);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">//调用聊天模块</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::string res = it-&gt;second-&gt;process(json);</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    res = it-&gt;second-&gt;response(res);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> res;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_process.html#a9f4553eac74c657bb451f390c17d6bea">   41</a></span>&#160;<a class="code" href="class_process.html#a9f4553eac74c657bb451f390c17d6bea">Process::Process</a>()</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_process.html#a82ea7905a614d62a55887c19ac197d2d">chat_map</a>.insert(std::make_pair(<a class="code" href="chatdefine_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba79d63cd4f46a00f33ebf61c5f744a7ff">TYPE_LOGIN</a>, std::make_shared&lt;Login&gt;()));</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="class_process.html#a82ea7905a614d62a55887c19ac197d2d">chat_map</a>.insert(std::make_pair(<a class="code" href="chatdefine_8h.html#a06fc87d81c62e9abb8790b6e5713c55bad41cf049875b215be7a6dd3fbf459e6e">TYPE_REGISTER</a>, std::make_shared&lt;Register&gt;()));</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="class_process.html#a82ea7905a614d62a55887c19ac197d2d">chat_map</a>.insert(std::make_pair(<a class="code" href="chatdefine_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba2ac3519fc678f7b96eb7981cca251b2a">TYPE_GET_LIST</a>, std::make_shared&lt;GetList&gt;()));</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="class_process.html#a82ea7905a614d62a55887c19ac197d2d">chat_map</a>.insert(std::make_pair(<a class="code" href="chatdefine_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba6873cf3a78aa72fd4f3b8032fb6614f2">TYPE_SEND_MESSAGE</a>, std::make_shared&lt;SendMessage&gt;()));</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="class_process.html#a82ea7905a614d62a55887c19ac197d2d">chat_map</a>.insert(std::make_pair(<a class="code" href="chatdefine_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba91dcdc6aa7dfe573495530667e526957">TYPE_GET_MESSAGE</a>, std::make_shared&lt;GetMessage&gt;()));</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="class_process.html#a82ea7905a614d62a55887c19ac197d2d">chat_map</a>.insert(std::make_pair(<a class="code" href="chatdefine_8h.html#a06fc87d81c62e9abb8790b6e5713c55baf5c46890add0b963c9de358cecefee63">TYPE_ADD_FRIEND</a>, std::make_shared&lt;AddFriend&gt;()));</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="class_process.html#a82ea7905a614d62a55887c19ac197d2d">chat_map</a>.insert(std::make_pair(<a class="code" href="chatdefine_8h.html#a06fc87d81c62e9abb8790b6e5713c55babc8c74d0b40fb10bfcb0e557b8d28e35">TYPE_HANDLE_ADD_FRIEND_REQUEST</a>, std::make_shared&lt;HnadleRequest&gt;()));</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div><div class="ttc" id="chatdefine_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba79d63cd4f46a00f33ebf61c5f744a7ff"><div class="ttname"><a href="chatdefine_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba79d63cd4f46a00f33ebf61c5f744a7ff">TYPE_LOGIN</a></div><div class="ttdef"><b>Definition:</b> <a href="chatdefine_8h_source.html#l00006">chatdefine.h:6</a></div></div>
+<div class="ttc" id="chatdefine_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba6873cf3a78aa72fd4f3b8032fb6614f2"><div class="ttname"><a href="chatdefine_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba6873cf3a78aa72fd4f3b8032fb6614f2">TYPE_SEND_MESSAGE</a></div><div class="ttdef"><b>Definition:</b> <a href="chatdefine_8h_source.html#l00009">chatdefine.h:9</a></div></div>
+<div class="ttc" id="chatdefine_8h_html_a06fc87d81c62e9abb8790b6e5713c55baf5c46890add0b963c9de358cecefee63"><div class="ttname"><a href="chatdefine_8h.html#a06fc87d81c62e9abb8790b6e5713c55baf5c46890add0b963c9de358cecefee63">TYPE_ADD_FRIEND</a></div><div class="ttdef"><b>Definition:</b> <a href="chatdefine_8h_source.html#l00011">chatdefine.h:11</a></div></div>
+<div class="ttc" id="chatdefine_8h_html_a06fc87d81c62e9abb8790b6e5713c55babc8c74d0b40fb10bfcb0e557b8d28e35"><div class="ttname"><a href="chatdefine_8h.html#a06fc87d81c62e9abb8790b6e5713c55babc8c74d0b40fb10bfcb0e557b8d28e35">TYPE_HANDLE_ADD_FRIEND_REQUEST</a></div><div class="ttdef"><b>Definition:</b> <a href="chatdefine_8h_source.html#l00012">chatdefine.h:12</a></div></div>
+<div class="ttc" id="chatdefine_8h_html_a06fc87d81c62e9abb8790b6e5713c55bad41cf049875b215be7a6dd3fbf459e6e"><div class="ttname"><a href="chatdefine_8h.html#a06fc87d81c62e9abb8790b6e5713c55bad41cf049875b215be7a6dd3fbf459e6e">TYPE_REGISTER</a></div><div class="ttdef"><b>Definition:</b> <a href="chatdefine_8h_source.html#l00007">chatdefine.h:7</a></div></div>
+<div class="ttc" id="class_process_html_a82ac8fbe893221ce72fbc0addda15f62"><div class="ttname"><a href="class_process.html#a82ac8fbe893221ce72fbc0addda15f62">Process::handle</a></div><div class="ttdeci">std::string handle(std::string json)</div><div class="ttdoc">解析json得到不同的模块枚举,调用相关模块 </div><div class="ttdef"><b>Definition:</b> <a href="process_8cpp_source.html#l00018">process.cpp:18</a></div></div>
+<div class="ttc" id="process_8h_html"><div class="ttname"><a href="process_8h.html">process.h</a></div><div class="ttdoc">聊天软件模块管理 </div></div>
+<div class="ttc" id="class_process_html_a82ea7905a614d62a55887c19ac197d2d"><div class="ttname"><a href="class_process.html#a82ea7905a614d62a55887c19ac197d2d">Process::chat_map</a></div><div class="ttdeci">std::map&lt; int, std::shared_ptr&lt; View &gt; &gt; chat_map</div><div class="ttdoc">映射不同模块 </div><div class="ttdef"><b>Definition:</b> <a href="process_8h_source.html#l00030">process.h:30</a></div></div>
+<div class="ttc" id="class_process_html_a9f4553eac74c657bb451f390c17d6bea"><div class="ttname"><a href="class_process.html#a9f4553eac74c657bb451f390c17d6bea">Process::Process</a></div><div class="ttdeci">Process()</div><div class="ttdef"><b>Definition:</b> <a href="process_8cpp_source.html#l00041">process.cpp:41</a></div></div>
+<div class="ttc" id="chatdefine_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba2ac3519fc678f7b96eb7981cca251b2a"><div class="ttname"><a href="chatdefine_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba2ac3519fc678f7b96eb7981cca251b2a">TYPE_GET_LIST</a></div><div class="ttdef"><b>Definition:</b> <a href="chatdefine_8h_source.html#l00008">chatdefine.h:8</a></div></div>
+<div class="ttc" id="chatdefine_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba91dcdc6aa7dfe573495530667e526957"><div class="ttname"><a href="chatdefine_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba91dcdc6aa7dfe573495530667e526957">TYPE_GET_MESSAGE</a></div><div class="ttdef"><b>Definition:</b> <a href="chatdefine_8h_source.html#l00010">chatdefine.h:10</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

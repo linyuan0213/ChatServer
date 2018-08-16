@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ChatServer: LibeventThread结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ChatServer
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="struct_libevent_thread-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">LibeventThread结构体 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>对线程池封装  
+ <a href="struct_libevent_thread.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="server_8h_source.html">server.h</a>&gt;</code></p>
+<div class="dynheader">
+LibeventThread 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_libevent_thread__coll__graph.png" border="0" usemap="#_libevent_thread_coll__map" alt="Collaboration graph"/></div>
+<map name="_libevent_thread_coll__map" id="_libevent_thread_coll__map">
+<area shape="rect" id="node2" href="class_core_server.html" title="核心类,创建多线程libevent主框架 " alt="" coords="19,5,114,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a0dfe78882988fa945f7c7e3d9035e185"><td class="memItemLeft" align="right" valign="top">pthread_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_libevent_thread.html#a0dfe78882988fa945f7c7e3d9035e185">tid</a></td></tr>
+<tr class="separator:a0dfe78882988fa945f7c7e3d9035e185"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab79744aa723467fa13281101f60d52a2"><td class="memItemLeft" align="right" valign="top">struct event_base *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_libevent_thread.html#ab79744aa723467fa13281101f60d52a2">base</a></td></tr>
+<tr class="separator:ab79744aa723467fa13281101f60d52a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bb343796a2ddef125a96c2923fdaa0f"><td class="memItemLeft" align="right" valign="top">struct event&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_libevent_thread.html#a3bb343796a2ddef125a96c2923fdaa0f">notify_event</a></td></tr>
+<tr class="separator:a3bb343796a2ddef125a96c2923fdaa0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb5f64ac792dcd09de11469c4fa71d24"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_libevent_thread.html#adb5f64ac792dcd09de11469c4fa71d24">notify_receive_fd</a></td></tr>
+<tr class="separator:adb5f64ac792dcd09de11469c4fa71d24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a024ff5638439723147736045878fcb44"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_libevent_thread.html#a024ff5638439723147736045878fcb44">notify_send_fd</a></td></tr>
+<tr class="separator:a024ff5638439723147736045878fcb44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86a71dc043a090abe88ed5a89725d6ef"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="class_conn.html">Conn</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_libevent_thread.html#a86a71dc043a090abe88ed5a89725d6ef">conn</a></td></tr>
+<tr class="separator:a86a71dc043a090abe88ed5a89725d6ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e9fa1b3ea3bd898fa64a670a64eca28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_core_server.html">CoreServer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_libevent_thread.html#a7e9fa1b3ea3bd898fa64a670a64eca28">p_tcp_conn</a></td></tr>
+<tr class="separator:a7e9fa1b3ea3bd898fa64a670a64eca28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>对线程池封装 </p>
+
+<p class="definition">在文件 <a class="el" href="server_8h_source.html">server.h</a> 第 <a class="el" href="server_8h_source.html#l00096">96</a> 行定义.</p>
+</div><h2 class="groupheader">类成员变量说明</h2>
+<a id="ab79744aa723467fa13281101f60d52a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab79744aa723467fa13281101f60d52a2">&#9670;&nbsp;</a></span>base</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct event_base* LibeventThread::base</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="server_8h_source.html">server.h</a> 第 <a class="el" href="server_8h_source.html#l00099">99</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a86a71dc043a090abe88ed5a89725d6ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86a71dc043a090abe88ed5a89725d6ef">&#9670;&nbsp;</a></span>conn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::list&lt;<a class="el" href="class_conn.html">Conn</a> *&gt; LibeventThread::conn</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="server_8h_source.html">server.h</a> 第 <a class="el" href="server_8h_source.html#l00104">104</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a3bb343796a2ddef125a96c2923fdaa0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bb343796a2ddef125a96c2923fdaa0f">&#9670;&nbsp;</a></span>notify_event</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct event LibeventThread::notify_event</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="server_8h_source.html">server.h</a> 第 <a class="el" href="server_8h_source.html#l00100">100</a> 行定义.</p>
+
+</div>
+</div>
+<a id="adb5f64ac792dcd09de11469c4fa71d24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb5f64ac792dcd09de11469c4fa71d24">&#9670;&nbsp;</a></span>notify_receive_fd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LibeventThread::notify_receive_fd</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="server_8h_source.html">server.h</a> 第 <a class="el" href="server_8h_source.html#l00101">101</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a024ff5638439723147736045878fcb44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a024ff5638439723147736045878fcb44">&#9670;&nbsp;</a></span>notify_send_fd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LibeventThread::notify_send_fd</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="server_8h_source.html">server.h</a> 第 <a class="el" href="server_8h_source.html#l00102">102</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a7e9fa1b3ea3bd898fa64a670a64eca28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e9fa1b3ea3bd898fa64a670a64eca28">&#9670;&nbsp;</a></span>p_tcp_conn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_core_server.html">CoreServer</a>* LibeventThread::p_tcp_conn</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="server_8h_source.html">server.h</a> 第 <a class="el" href="server_8h_source.html#l00106">106</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a0dfe78882988fa945f7c7e3d9035e185"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dfe78882988fa945f7c7e3d9035e185">&#9670;&nbsp;</a></span>tid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_t LibeventThread::tid</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="server_8h_source.html">server.h</a> 第 <a class="el" href="server_8h_source.html#l00098">98</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>MultServer/<a class="el" href="server_8h_source.html">server.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

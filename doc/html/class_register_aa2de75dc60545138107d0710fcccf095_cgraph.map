@@ -1,0 +1,8 @@
+<map id="Register::process" name="Register::process">
+<area shape="rect" id="node2" href="$class_sql.html#a55a4e6107d72aba3888706a68bde7234" title="设置连接信息 " alt="" coords="187,5,341,32"/>
+<area shape="rect" id="node3" href="$class_sql.html#a08c93d9c471f99f91e5abc04f17b23de" title="连接数据库 " alt="" coords="223,56,305,83"/>
+<area shape="rect" id="node5" href="$class_sql.html#aa09086f9377e4afb2ff0519c04c17308" title="查询数据库调用select等命令 " alt="" coords="219,107,309,133"/>
+<area shape="rect" id="node6" href="$class_register.html#a438197f0e7209c2d1de2db897bc7887e" title="对密码采用md5加密 " alt="" coords="208,157,320,184"/>
+<area shape="rect" id="node7" href="$class_sql.html#a1bf64ef4024538e3d1f6654630f58ed5" title="调用update delete等命令 " alt="" coords="221,208,307,235"/>
+<area shape="rect" id="node4" href="$class_sql.html#abb24009b5cc31e39218ef1f622425b33" title="出错信息处理 " alt="" coords="389,107,536,133"/>
+</map>

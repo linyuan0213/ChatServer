@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ChatServer: Views/register.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ChatServer
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e47e4de72e0320db55f81376ac4f26ec.html">Views</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">register.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="register_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CHATSERVER_REGISTER_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CHATSERVER_REGISTER_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="register_8h.html#a60054cd46e0dc2ed04249519a5291cda">   25</a></span>&#160;<span class="preprocessor">#define CRYPTOPP_ENABLE_NAMESPACE_WEAK 1</span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;json/json.h&gt;</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;cryptopp/hex.h&gt;</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;cryptopp/osrng.h&gt;</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;cryptopp/md5.h&gt;</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;../Model/sql.h&quot;</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="view_8h.html">view.h</a>&quot;</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_register.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_register.html">Register</a> : <span class="keyword">public</span> <a class="code" href="class_view.html">View</a></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="class_register.html#a669b96861697fb8c04bce79f04390c66">Register</a>();</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_register.html#a27490bda19cd4bd6ca09b48a795fc060">~Register</a>();</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    std::string <a class="code" href="class_register.html#aa2de75dc60545138107d0710fcccf095">process</a>(std::string root) <span class="keyword">override</span> ;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    std::string <a class="code" href="class_register.html#a98f08465a49330f27b3abe21d4ee7022">response</a>(std::string status) <span class="keyword">override</span> ;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    std::string <a class="code" href="class_register.html#a438197f0e7209c2d1de2db897bc7887e">MD5</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * message);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif //CHATSERVER_REGISTER_H</span></div><div class="ttc" id="class_register_html_a438197f0e7209c2d1de2db897bc7887e"><div class="ttname"><a href="class_register.html#a438197f0e7209c2d1de2db897bc7887e">Register::MD5</a></div><div class="ttdeci">std::string MD5(const char *message)</div><div class="ttdoc">对密码采用md5加密 </div><div class="ttdef"><b>Definition:</b> <a href="register_8cpp_source.html#l00107">register.cpp:107</a></div></div>
+<div class="ttc" id="class_register_html_a27490bda19cd4bd6ca09b48a795fc060"><div class="ttname"><a href="class_register.html#a27490bda19cd4bd6ca09b48a795fc060">Register::~Register</a></div><div class="ttdeci">~Register()</div><div class="ttdef"><b>Definition:</b> <a href="register_8cpp_source.html#l00012">register.cpp:12</a></div></div>
+<div class="ttc" id="class_register_html_aa2de75dc60545138107d0710fcccf095"><div class="ttname"><a href="class_register.html#aa2de75dc60545138107d0710fcccf095">Register::process</a></div><div class="ttdeci">std::string process(std::string root) override</div><div class="ttdoc">注册用户 </div><div class="ttdef"><b>Definition:</b> <a href="register_8cpp_source.html#l00020">register.cpp:20</a></div></div>
+<div class="ttc" id="class_register_html_a669b96861697fb8c04bce79f04390c66"><div class="ttname"><a href="class_register.html#a669b96861697fb8c04bce79f04390c66">Register::Register</a></div><div class="ttdeci">Register()</div><div class="ttdef"><b>Definition:</b> <a href="register_8cpp_source.html#l00007">register.cpp:7</a></div></div>
+<div class="ttc" id="class_register_html"><div class="ttname"><a href="class_register.html">Register</a></div><div class="ttdoc">注册模块 </div><div class="ttdef"><b>Definition:</b> <a href="register_8h_source.html#l00039">register.h:39</a></div></div>
+<div class="ttc" id="view_8h_html"><div class="ttname"><a href="view_8h.html">view.h</a></div><div class="ttdoc">视图模块,提供处理模块相同的接口 </div></div>
+<div class="ttc" id="class_register_html_a98f08465a49330f27b3abe21d4ee7022"><div class="ttname"><a href="class_register.html#a98f08465a49330f27b3abe21d4ee7022">Register::response</a></div><div class="ttdeci">std::string response(std::string status) override</div><div class="ttdoc">返回给客户端处理信息 </div><div class="ttdef"><b>Definition:</b> <a href="register_8cpp_source.html#l00097">register.cpp:97</a></div></div>
+<div class="ttc" id="class_view_html"><div class="ttname"><a href="class_view.html">View</a></div><div class="ttdef"><b>Definition:</b> <a href="view_8h_source.html#l00023">view.h:23</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

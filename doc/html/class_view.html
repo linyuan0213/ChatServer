@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ChatServer: View类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ChatServer
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="class_view-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">View类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="view_8h_source.html">view.h</a>&gt;</code></p>
+<div class="dynheader">
+类 View 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_view__inherit__graph.png" border="0" usemap="#_view_inherit__map" alt="Inheritance graph"/></div>
+<map name="_view_inherit__map" id="_view_inherit__map">
+<area shape="rect" id="node2" href="class_add_friend.html" title="添加好友 " alt="" coords="5,80,92,107"/>
+<area shape="rect" id="node3" href="class_get_list.html" title="获取好友列表 " alt="" coords="116,80,184,107"/>
+<area shape="rect" id="node4" href="class_get_message.html" title="获取聊天信息 " alt="" coords="208,80,311,107"/>
+<area shape="rect" id="node5" href="class_hnadle_request.html" title="处理好友请求 " alt="" coords="335,80,455,107"/>
+<area shape="rect" id="node6" href="class_login.html" title="登录模块 " alt="" coords="480,80,537,107"/>
+<area shape="rect" id="node7" href="class_register.html" title="注册模块 " alt="" coords="562,80,637,107"/>
+<area shape="rect" id="node8" href="class_send_message.html" title="发送消息 " alt="" coords="661,80,772,107"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aed155d96a510f8f4338381b0b644c1bf"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#aed155d96a510f8f4338381b0b644c1bf">process</a> (std::string root)=0</td></tr>
+<tr class="separator:aed155d96a510f8f4338381b0b644c1bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71133989475bff1d06765f23fa65e528"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#a71133989475bff1d06765f23fa65e528">response</a> (std::string status)=0</td></tr>
+<tr class="separator:a71133989475bff1d06765f23fa65e528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>视图模块 </p>
+
+<p class="definition">在文件 <a class="el" href="view_8h_source.html">view.h</a> 第 <a class="el" href="view_8h_source.html#l00023">23</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="aed155d96a510f8f4338381b0b644c1bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed155d96a510f8f4338381b0b644c1bf">&#9670;&nbsp;</a></span>process()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string View::process </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>root</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_register.html#aa2de75dc60545138107d0710fcccf095">Register</a>, <a class="el" href="class_get_list.html#ac6a61f033816670c48056f9b061083aa">GetList</a>, <a class="el" href="class_add_friend.html#a3821e7a66de91eaa8e7c3aef5a459d36">AddFriend</a> , 以及 <a class="el" href="class_login.html#a9499c00f992f00ec1ffe3c6eaf1db954">Login</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a71133989475bff1d06765f23fa65e528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71133989475bff1d06765f23fa65e528">&#9670;&nbsp;</a></span>response()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string View::response </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_register.html#a98f08465a49330f27b3abe21d4ee7022">Register</a>, <a class="el" href="class_get_list.html#a8bfbc16f6b995b2c33383d6dbaa5e07d">GetList</a>, <a class="el" href="class_add_friend.html#ae7efd07aaddb58ecd919e990ce7ff96c">AddFriend</a> , 以及 <a class="el" href="class_login.html#a15610f8af0c3e79ea7bc87fb7a2d30dc">Login</a> 内被实现.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Views/<a class="el" href="view_8h_source.html">view.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

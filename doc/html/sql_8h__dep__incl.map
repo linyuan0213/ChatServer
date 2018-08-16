@@ -1,0 +1,18 @@
+<map id="Model/sql.h" name="Model/sql.h">
+<area shape="rect" id="node2" href="$register_8h.html" title="聊天软件注册模块实现 " alt="" coords="1149,80,1275,107"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="聊天软件主函数 " alt="" coords="1339,155,1456,181"/>
+<area shape="rect" id="node6" href="$getlist_8h.html" title="聊天软件获取好友列表 " alt="" coords="230,80,349,107"/>
+<area shape="rect" id="node8" href="$sendmessages_8h.html" title="聊天软件聊天模块实现 &#160;" alt="" coords="373,80,547,107"/>
+<area shape="rect" id="node10" href="$getmessage_8h.html" title="聊天软件聊天模块实现 " alt="" coords="572,80,729,107"/>
+<area shape="rect" id="node12" href="$addfriend_8h.html" title="聊天软件添加好友模块实现 " alt="" coords="753,80,892,107"/>
+<area shape="rect" id="node14" href="$handlefriendrequest_8h.html" title="聊天软件处理好友添加请求模块实现 " alt="" coords="916,80,1124,107"/>
+<area shape="rect" id="node16" href="$sql_8cpp.html" title="Model/sql.cpp" alt="" coords="1351,80,1462,107"/>
+<area shape="rect" id="node17" href="$login_8cpp.html" title="Views/login.cpp" alt="" coords="1486,80,1610,107"/>
+<area shape="rect" id="node3" href="$process_8cpp.html" title="Control/process.cpp" alt="" coords="573,155,723,181"/>
+<area shape="rect" id="node5" href="$register_8cpp.html" title="Views/register.cpp" alt="" coords="1173,155,1315,181"/>
+<area shape="rect" id="node7" href="$getlist_8cpp.html" title="Views/getlist.cpp" alt="" coords="5,155,139,181"/>
+<area shape="rect" id="node9" href="$sendmessages_8cpp.html" title="Views/sendmessages.cpp" alt="" coords="163,155,352,181"/>
+<area shape="rect" id="node11" href="$getmessage_8cpp.html" title="Views/getmessage.cpp" alt="" coords="377,155,549,181"/>
+<area shape="rect" id="node13" href="$addfriend_8cpp.html" title="Views/addfriend.cpp" alt="" coords="748,155,903,181"/>
+<area shape="rect" id="node15" href="$handlefriendrequest_8cpp.html" title="Views/handlefriendrequest.cpp" alt="" coords="927,155,1150,181"/>
+</map>

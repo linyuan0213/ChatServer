@@ -1,0 +1,21 @@
+<map id="Views/chatdefine.h" name="Views/chatdefine.h">
+<area shape="rect" id="node2" href="$view_8h.html" title="视图模块,提供处理模块相同的接口 " alt="" coords="853,80,959,107"/>
+<area shape="rect" id="node4" href="$process_8cpp.html" title="Control/process.cpp" alt="" coords="833,229,984,256"/>
+<area shape="rect" id="node3" href="$process_8h.html" title="聊天软件模块管理 " alt="" coords="219,155,353,181"/>
+<area shape="rect" id="node7" href="$login_8h.html" title="聊天软件登录模块实现 " alt="" coords="383,155,493,181"/>
+<area shape="rect" id="node9" href="$register_8h.html" title="聊天软件注册模块实现 " alt="" coords="520,155,647,181"/>
+<area shape="rect" id="node11" href="$getlist_8h.html" title="聊天软件获取好友列表 " alt="" coords="676,155,795,181"/>
+<area shape="rect" id="node13" href="$sendmessages_8h.html" title="聊天软件聊天模块实现 &#160;" alt="" coords="819,155,993,181"/>
+<area shape="rect" id="node15" href="$getmessage_8h.html" title="聊天软件聊天模块实现 " alt="" coords="1018,155,1175,181"/>
+<area shape="rect" id="node17" href="$addfriend_8h.html" title="聊天软件添加好友模块实现 " alt="" coords="1199,155,1338,181"/>
+<area shape="rect" id="node19" href="$handlefriendrequest_8h.html" title="聊天软件处理好友添加请求模块实现 " alt="" coords="1362,155,1570,181"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="聊天软件主函数 " alt="" coords="221,229,338,256"/>
+<area shape="rect" id="node6" href="$chatserver_8cpp.html" title="MultServer/chatserver.cpp" alt="" coords="5,229,196,256"/>
+<area shape="rect" id="node8" href="$login_8cpp.html" title="Views/login.cpp" alt="" coords="361,229,485,256"/>
+<area shape="rect" id="node10" href="$register_8cpp.html" title="Views/register.cpp" alt="" coords="510,229,651,256"/>
+<area shape="rect" id="node12" href="$getlist_8cpp.html" title="Views/getlist.cpp" alt="" coords="675,229,809,256"/>
+<area shape="rect" id="node14" href="$sendmessages_8cpp.html" title="Views/sendmessages.cpp" alt="" coords="1009,229,1198,256"/>
+<area shape="rect" id="node16" href="$getmessage_8cpp.html" title="Views/getmessage.cpp" alt="" coords="1223,229,1395,256"/>
+<area shape="rect" id="node18" href="$addfriend_8cpp.html" title="Views/addfriend.cpp" alt="" coords="1419,229,1574,256"/>
+<area shape="rect" id="node20" href="$handlefriendrequest_8cpp.html" title="Views/handlefriendrequest.cpp" alt="" coords="1599,229,1821,256"/>
+</map>

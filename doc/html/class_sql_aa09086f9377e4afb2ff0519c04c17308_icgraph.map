@@ -1,0 +1,6 @@
+<map id="Sql::select" name="Sql::select">
+<area shape="rect" id="node2" href="$class_add_friend.html#a3821e7a66de91eaa8e7c3aef5a459d36" title="将添加好友插入数据库,ispassed为0 " alt="" coords="143,5,287,32"/>
+<area shape="rect" id="node3" href="$class_get_list.html#ac6a61f033816670c48056f9b061083aa" title="通过json包返回好友列表 " alt="" coords="151,56,278,83"/>
+<area shape="rect" id="node4" href="$class_login.html#a9499c00f992f00ec1ffe3c6eaf1db954" title="Login::process" alt="" coords="157,107,272,133"/>
+<area shape="rect" id="node5" href="$class_register.html#aa2de75dc60545138107d0710fcccf095" title="注册用户 " alt="" coords="148,157,281,184"/>
+</map>

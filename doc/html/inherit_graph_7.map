@@ -1,0 +1,10 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="node1" href="$class_view.html" title="View" alt="" coords="5,157,60,184"/>
+<area shape="rect" id="node2" href="$class_add_friend.html" title="添加好友 " alt="" coords="125,5,211,32"/>
+<area shape="rect" id="node3" href="$class_get_list.html" title="获取好友列表 " alt="" coords="134,56,202,83"/>
+<area shape="rect" id="node4" href="$class_get_message.html" title="获取聊天信息 " alt="" coords="117,107,219,133"/>
+<area shape="rect" id="node5" href="$class_hnadle_request.html" title="处理好友请求 " alt="" coords="108,157,228,184"/>
+<area shape="rect" id="node6" href="$class_login.html" title="登录模块 " alt="" coords="139,208,197,235"/>
+<area shape="rect" id="node7" href="$class_register.html" title="注册模块 " alt="" coords="131,259,205,285"/>
+<area shape="rect" id="node8" href="$class_send_message.html" title="发送消息 " alt="" coords="113,309,223,336"/>
+</map>

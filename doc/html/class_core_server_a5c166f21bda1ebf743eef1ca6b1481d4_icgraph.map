@@ -1,0 +1,5 @@
+<map id="CoreServer::stop_run" name="CoreServer::stop_run">
+<area shape="rect" id="node2" href="$class_test_server.html#a1bf33220a26de62ebfcdc9c0f4af483b" title="信号处理函数,Ctrl+C 后丢调用该函数,终止服务器 " alt="" coords="232,5,377,32"/>
+<area shape="rect" id="node4" href="$class_core_server.html#a529730181ad993d8d0e6cce7ddd79d67" title="释放LibeventThread内存 " alt="" coords="212,56,397,83"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="445,5,500,32"/>
+</map>

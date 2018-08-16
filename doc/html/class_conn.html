@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ChatServer: Conn类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ChatServer
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="class_conn-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">Conn类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>封装发送和接收模块  
+ <a href="class_conn.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="server_8h_source.html">server.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:abf64f806789a69be6e919c93217aa8b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_conn.html#abf64f806789a69be6e919c93217aa8b8">Conn</a> (int fd=0)</td></tr>
+<tr class="memdesc:abf64f806789a69be6e919c93217aa8b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化连接描述符  <a href="#abf64f806789a69be6e919c93217aa8b8">更多...</a><br /></td></tr>
+<tr class="separator:abf64f806789a69be6e919c93217aa8b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45fa096c27a1cdbeb295c903045ce071"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_conn.html#a45fa096c27a1cdbeb295c903045ce071">~Conn</a> ()</td></tr>
+<tr class="separator:a45fa096c27a1cdbeb295c903045ce071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ef946dc4e09101da7bd8628c78fa396"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_libevent_thread.html">LibeventThread</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_conn.html#a5ef946dc4e09101da7bd8628c78fa396">get_thread</a> ()</td></tr>
+<tr class="memdesc:a5ef946dc4e09101da7bd8628c78fa396"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取线程信息  <a href="#a5ef946dc4e09101da7bd8628c78fa396">更多...</a><br /></td></tr>
+<tr class="separator:a5ef946dc4e09101da7bd8628c78fa396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa00879a9b644793901a13d3967f7e047"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_conn.html#aa00879a9b644793901a13d3967f7e047">get_fd</a> ()</td></tr>
+<tr class="memdesc:aa00879a9b644793901a13d3967f7e047"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取连接描述符  <a href="#aa00879a9b644793901a13d3967f7e047">更多...</a><br /></td></tr>
+<tr class="separator:aa00879a9b644793901a13d3967f7e047"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11d5280874c55d9182e9facd0cc3bb1f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_conn.html#a11d5280874c55d9182e9facd0cc3bb1f">get_read_buffer_len</a> ()</td></tr>
+<tr class="memdesc:a11d5280874c55d9182e9facd0cc3bb1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取可读数据的长度  <a href="#a11d5280874c55d9182e9facd0cc3bb1f">更多...</a><br /></td></tr>
+<tr class="separator:a11d5280874c55d9182e9facd0cc3bb1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae874ad92e6990077cfc0c4fa6ed20b1c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_conn.html#ae874ad92e6990077cfc0c4fa6ed20b1c">get_read_buffer</a> (char *buffer, int len)</td></tr>
+<tr class="separator:ae874ad92e6990077cfc0c4fa6ed20b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a015ed5f07f6c2a5f200ffb6fcc9ee506"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_conn.html#a015ed5f07f6c2a5f200ffb6fcc9ee506">copy_read_buffer</a> (char *buffer, int len)</td></tr>
+<tr class="separator:a015ed5f07f6c2a5f200ffb6fcc9ee506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1568cb09fa4d3f22ec78d6fed1d0192"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_conn.html#af1568cb09fa4d3f22ec78d6fed1d0192">get_write_buffer_len</a> ()</td></tr>
+<tr class="separator:af1568cb09fa4d3f22ec78d6fed1d0192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48949dca060ff355db969c9dba3628dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_conn.html#a48949dca060ff355db969c9dba3628dc">add_to_write_buffer</a> (char *buffer, int len)</td></tr>
+<tr class="separator:a48949dca060ff355db969c9dba3628dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15a0701e42633ecfcd35bdb25b23db94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_conn.html#a15a0701e42633ecfcd35bdb25b23db94">move_buffer_data</a> ()</td></tr>
+<tr class="memdesc:a15a0701e42633ecfcd35bdb25b23db94"><td class="mdescLeft">&#160;</td><td class="mdescRight">将读缓冲区中的数据移动到写缓冲区  <a href="#a15a0701e42633ecfcd35bdb25b23db94">更多...</a><br /></td></tr>
+<tr class="separator:a15a0701e42633ecfcd35bdb25b23db94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:ace0c6209d04ee404178e78e59cd8c64a"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_conn.html#ace0c6209d04ee404178e78e59cd8c64a">CoreServer</a></td></tr>
+<tr class="separator:ace0c6209d04ee404178e78e59cd8c64a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>封装发送和接收模块 </p>
+
+<p class="definition">在文件 <a class="el" href="server_8h_source.html">server.h</a> 第 <a class="el" href="server_8h_source.html#l00050">50</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="abf64f806789a69be6e919c93217aa8b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf64f806789a69be6e919c93217aa8b8">&#9670;&nbsp;</a></span>Conn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Conn::Conn </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初始化连接描述符 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="server_8cpp_source.html">server.cpp</a> 第 <a class="el" href="server_8cpp_source.html#l00358">358</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a45fa096c27a1cdbeb295c903045ce071"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45fa096c27a1cdbeb295c903045ce071">&#9670;&nbsp;</a></span>~Conn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Conn::~Conn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="server_8cpp_source.html">server.cpp</a> 第 <a class="el" href="server_8cpp_source.html#l00363">363</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a48949dca060ff355db969c9dba3628dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48949dca060ff355db969c9dba3628dc">&#9670;&nbsp;</a></span>add_to_write_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Conn::add_to_write_buffer </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>将数据加入写缓冲区，准备发送 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>用户缓冲区 </td></tr>
+    <tr><td class="paramname">len</td><td>缓冲区长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回添加到m_writebuf的长度 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="server_8cpp_source.html">server.cpp</a> 第 <a class="el" href="server_8cpp_source.html#l00424">424</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_conn_a48949dca060ff355db969c9dba3628dc_icgraph.png" border="0" usemap="#class_conn_a48949dca060ff355db969c9dba3628dc_icgraph" alt=""/></div>
+<map name="class_conn_a48949dca060ff355db969c9dba3628dc_icgraph" id="class_conn_a48949dca060ff355db969c9dba3628dc_icgraph">
+<area shape="rect" id="node2" href="class_test_server.html#a944d86c040467efd07d6348259f9445b" title="读取客户端发送信息,处理后,发送给客户端 " alt="" coords="200,13,349,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a015ed5f07f6c2a5f200ffb6fcc9ee506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a015ed5f07f6c2a5f200ffb6fcc9ee506">&#9670;&nbsp;</a></span>copy_read_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Conn::copy_read_buffer </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>从读缓冲区中复制出len个字节的数据，存入buffer中，若不够，则复制出所有数据 执行该操作后，数据还会留在缓冲区中，buffer中的数据只是原数据的副本 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>用户数据缓冲区 </td></tr>
+    <tr><td class="paramname">len</td><td>缓冲区长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回复制出数据的字节数 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="server_8cpp_source.html">server.cpp</a> 第 <a class="el" href="server_8cpp_source.html#l00408">408</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aa00879a9b644793901a13d3967f7e047"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa00879a9b644793901a13d3967f7e047">&#9670;&nbsp;</a></span>get_fd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Conn::get_fd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取连接描述符 </p>
+<dl class="section return"><dt>返回</dt><dd>文件描述符 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="server_8cpp_source.html">server.cpp</a> 第 <a class="el" href="server_8cpp_source.html#l00380">380</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_conn_aa00879a9b644793901a13d3967f7e047_icgraph.png" border="0" usemap="#class_conn_aa00879a9b644793901a13d3967f7e047_icgraph" alt=""/></div>
+<map name="class_conn_aa00879a9b644793901a13d3967f7e047_icgraph" id="class_conn_aa00879a9b644793901a13d3967f7e047_icgraph">
+<area shape="rect" id="node2" href="class_test_server.html#a89534a45f8a09b731083e808399a2cb2" title="客户端连接成功后,调用该函数 " alt="" coords="157,5,328,32"/>
+<area shape="rect" id="node3" href="class_test_server.html#a3a0371e7fb9087e03841ff9dd3590d1b" title="客户端连接断开,调用用该函数 " alt="" coords="165,56,320,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae874ad92e6990077cfc0c4fa6ed20b1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae874ad92e6990077cfc0c4fa6ed20b1c">&#9670;&nbsp;</a></span>get_read_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Conn::get_read_buffer </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>从读缓冲区中取出len个字节的数据，存入buffer中，若不够，则读出所有数据 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>用户数据缓冲区 </td></tr>
+    <tr><td class="paramname">len</td><td>缓冲区长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回读出数据的字节数 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="server_8cpp_source.html">server.cpp</a> 第 <a class="el" href="server_8cpp_source.html#l00398">398</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_conn_ae874ad92e6990077cfc0c4fa6ed20b1c_icgraph.png" border="0" usemap="#class_conn_ae874ad92e6990077cfc0c4fa6ed20b1c_icgraph" alt=""/></div>
+<map name="class_conn_ae874ad92e6990077cfc0c4fa6ed20b1c_icgraph" id="class_conn_ae874ad92e6990077cfc0c4fa6ed20b1c_icgraph">
+<area shape="rect" id="node2" href="class_test_server.html#a944d86c040467efd07d6348259f9445b" title="读取客户端发送信息,处理后,发送给客户端 " alt="" coords="219,5,368,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a11d5280874c55d9182e9facd0cc3bb1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11d5280874c55d9182e9facd0cc3bb1f">&#9670;&nbsp;</a></span>get_read_buffer_len()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Conn::get_read_buffer_len </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取可读数据的长度 </p>
+<dl class="section return"><dt>返回</dt><dd>返回数据长度 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="server_8cpp_source.html">server.cpp</a> 第 <a class="el" href="server_8cpp_source.html#l00388">388</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a5ef946dc4e09101da7bd8628c78fa396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ef946dc4e09101da7bd8628c78fa396">&#9670;&nbsp;</a></span>get_thread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_libevent_thread.html">LibeventThread</a> * Conn::get_thread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取线程信息 </p>
+<dl class="section return"><dt>返回</dt><dd>返回线程结构体信息 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="server_8cpp_source.html">server.cpp</a> 第 <a class="el" href="server_8cpp_source.html#l00371">371</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_conn_a5ef946dc4e09101da7bd8628c78fa396_icgraph.png" border="0" usemap="#class_conn_a5ef946dc4e09101da7bd8628c78fa396_icgraph" alt=""/></div>
+<map name="class_conn_a5ef946dc4e09101da7bd8628c78fa396_icgraph" id="class_conn_a5ef946dc4e09101da7bd8628c78fa396_icgraph">
+<area shape="rect" id="node2" href="class_test_server.html#a89534a45f8a09b731083e808399a2cb2" title="客户端连接成功后,调用该函数 " alt="" coords="187,5,357,32"/>
+<area shape="rect" id="node3" href="class_test_server.html#a3a0371e7fb9087e03841ff9dd3590d1b" title="客户端连接断开,调用用该函数 " alt="" coords="195,56,349,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af1568cb09fa4d3f22ec78d6fed1d0192"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1568cb09fa4d3f22ec78d6fed1d0192">&#9670;&nbsp;</a></span>get_write_buffer_len()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Conn::get_write_buffer_len </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>获取可写数据的长度 </p><dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+<p class="definition">在文件 <a class="el" href="server_8cpp_source.html">server.cpp</a> 第 <a class="el" href="server_8cpp_source.html#l00415">415</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a15a0701e42633ecfcd35bdb25b23db94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15a0701e42633ecfcd35bdb25b23db94">&#9670;&nbsp;</a></span>move_buffer_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Conn::move_buffer_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将读缓冲区中的数据移动到写缓冲区 </p>
+
+<p class="definition">在文件 <a class="el" href="server_8cpp_source.html">server.cpp</a> 第 <a class="el" href="server_8cpp_source.html#l00430">430</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">友元及相关函数文档</h2>
+<a id="ace0c6209d04ee404178e78e59cd8c64a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace0c6209d04ee404178e78e59cd8c64a">&#9670;&nbsp;</a></span>CoreServer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_core_server.html">CoreServer</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="server_8h_source.html">server.h</a> 第 <a class="el" href="server_8h_source.html#l00052">52</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>MultServer/<a class="el" href="server_8h_source.html">server.h</a></li>
+<li>MultServer/<a class="el" href="server_8cpp_source.html">server.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<map id="AddFriend::process" name="AddFriend::process">
+<area shape="rect" id="node2" href="$class_sql.html#a55a4e6107d72aba3888706a68bde7234" title="设置连接信息 " alt="" coords="197,5,352,32"/>
+<area shape="rect" id="node3" href="$class_sql.html#a08c93d9c471f99f91e5abc04f17b23de" title="连接数据库 " alt="" coords="233,56,316,83"/>
+<area shape="rect" id="node5" href="$class_sql.html#aa09086f9377e4afb2ff0519c04c17308" title="查询数据库调用select等命令 " alt="" coords="230,107,319,133"/>
+<area shape="rect" id="node6" href="$class_sql.html#a1bf64ef4024538e3d1f6654630f58ed5" title="调用update delete等命令 " alt="" coords="231,157,318,184"/>
+<area shape="rect" id="node4" href="$class_sql.html#abb24009b5cc31e39218ef1f622425b33" title="出错信息处理 " alt="" coords="400,107,547,133"/>
+</map>

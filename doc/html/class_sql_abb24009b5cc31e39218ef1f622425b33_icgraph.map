@@ -1,0 +1,10 @@
+<map id="Sql::error_message" name="Sql::error_message">
+<area shape="rect" id="node2" href="$class_sql.html#a08c93d9c471f99f91e5abc04f17b23de" title="连接数据库 " alt="" coords="203,56,286,83"/>
+<area shape="rect" id="node7" href="$class_sql.html#aa09086f9377e4afb2ff0519c04c17308" title="查询数据库调用select等命令 " alt="" coords="200,107,289,133"/>
+<area shape="rect" id="node8" href="$class_sql.html#a1bf64ef4024538e3d1f6654630f58ed5" title="调用update delete等命令 " alt="" coords="201,157,288,184"/>
+<area shape="rect" id="node9" href="$class_sql.html#ab2fa63250bf04d69653113c68f51f5b3" title="插入并获取id " alt="" coords="342,208,477,235"/>
+<area shape="rect" id="node3" href="$class_add_friend.html#a3821e7a66de91eaa8e7c3aef5a459d36" title="将添加好友插入数据库,ispassed为0 " alt="" coords="337,157,481,184"/>
+<area shape="rect" id="node4" href="$class_get_list.html#ac6a61f033816670c48056f9b061083aa" title="通过json包返回好友列表 " alt="" coords="346,56,473,83"/>
+<area shape="rect" id="node5" href="$class_login.html#a9499c00f992f00ec1ffe3c6eaf1db954" title="Login::process" alt="" coords="352,5,467,32"/>
+<area shape="rect" id="node6" href="$class_register.html#aa2de75dc60545138107d0710fcccf095" title="注册用户 " alt="" coords="343,107,476,133"/>
+</map>

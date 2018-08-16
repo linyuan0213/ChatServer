@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ChatServer: Views/getlist.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ChatServer
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e47e4de72e0320db55f81376ac4f26ec.html">Views</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">getlist.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="getlist_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CHATSERVER_GETLIST_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CHATSERVER_GETLIST_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;json/json.h&gt;</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="view_8h.html">view.h</a>&quot;</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;../Model/sql.h&quot;</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_get_list.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_get_list.html">GetList</a> : <span class="keyword">public</span> <a class="code" href="class_view.html">View</a></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_get_list.html#ae884cf0f5afece0f6650cc00682001cf">GetList</a>();</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_get_list.html#a23e68157932928f27e4a64412fb3871d">~GetList</a>();</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    std::string <a class="code" href="class_get_list.html#ac6a61f033816670c48056f9b061083aa">process</a>(std::string root) <span class="keyword">override</span>;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    std::string <a class="code" href="class_get_list.html#a8bfbc16f6b995b2c33383d6dbaa5e07d">response</a>(std::string status) <span class="keyword">override</span>;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif //CHATSERVER_GETLIST_H</span></div><div class="ttc" id="class_get_list_html"><div class="ttname"><a href="class_get_list.html">GetList</a></div><div class="ttdoc">获取好友列表 </div><div class="ttdef"><b>Definition:</b> <a href="getlist_8h_source.html#l00036">getlist.h:36</a></div></div>
+<div class="ttc" id="class_get_list_html_a8bfbc16f6b995b2c33383d6dbaa5e07d"><div class="ttname"><a href="class_get_list.html#a8bfbc16f6b995b2c33383d6dbaa5e07d">GetList::response</a></div><div class="ttdeci">std::string response(std::string status) override</div><div class="ttdoc">返回给客户端处理信息 </div><div class="ttdef"><b>Definition:</b> <a href="getlist_8cpp_source.html#l00091">getlist.cpp:91</a></div></div>
+<div class="ttc" id="view_8h_html"><div class="ttname"><a href="view_8h.html">view.h</a></div><div class="ttdoc">视图模块,提供处理模块相同的接口 </div></div>
+<div class="ttc" id="class_get_list_html_a23e68157932928f27e4a64412fb3871d"><div class="ttname"><a href="class_get_list.html#a23e68157932928f27e4a64412fb3871d">GetList::~GetList</a></div><div class="ttdeci">~GetList()</div><div class="ttdef"><b>Definition:</b> <a href="getlist_8cpp_source.html#l00012">getlist.cpp:12</a></div></div>
+<div class="ttc" id="class_get_list_html_ac6a61f033816670c48056f9b061083aa"><div class="ttname"><a href="class_get_list.html#ac6a61f033816670c48056f9b061083aa">GetList::process</a></div><div class="ttdeci">std::string process(std::string root) override</div><div class="ttdoc">通过json包返回好友列表 </div><div class="ttdef"><b>Definition:</b> <a href="getlist_8cpp_source.html#l00020">getlist.cpp:20</a></div></div>
+<div class="ttc" id="class_view_html"><div class="ttname"><a href="class_view.html">View</a></div><div class="ttdef"><b>Definition:</b> <a href="view_8h_source.html#l00023">view.h:23</a></div></div>
+<div class="ttc" id="class_get_list_html_ae884cf0f5afece0f6650cc00682001cf"><div class="ttname"><a href="class_get_list.html#ae884cf0f5afece0f6650cc00682001cf">GetList::GetList</a></div><div class="ttdeci">GetList()</div><div class="ttdef"><b>Definition:</b> <a href="getlist_8cpp_source.html#l00007">getlist.cpp:7</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

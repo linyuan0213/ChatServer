@@ -1,0 +1,9 @@
+<map id="View" name="View">
+<area shape="rect" id="node2" href="$class_add_friend.html" title="添加好友 " alt="" coords="5,80,92,107"/>
+<area shape="rect" id="node3" href="$class_get_list.html" title="获取好友列表 " alt="" coords="116,80,184,107"/>
+<area shape="rect" id="node4" href="$class_get_message.html" title="获取聊天信息 " alt="" coords="208,80,311,107"/>
+<area shape="rect" id="node5" href="$class_hnadle_request.html" title="处理好友请求 " alt="" coords="335,80,455,107"/>
+<area shape="rect" id="node6" href="$class_login.html" title="登录模块 " alt="" coords="480,80,537,107"/>
+<area shape="rect" id="node7" href="$class_register.html" title="注册模块 " alt="" coords="562,80,637,107"/>
+<area shape="rect" id="node8" href="$class_send_message.html" title="发送消息 " alt="" coords="661,80,772,107"/>
+</map>
