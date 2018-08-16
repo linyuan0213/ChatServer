@@ -26,6 +26,10 @@
 *.a
 *.lib
 
+#dir
+./bin 
+./objs 
+
 # Executables
 *.exe
 *.out
