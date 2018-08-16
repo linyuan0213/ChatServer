@@ -27,8 +27,11 @@
 *.lib
 
 #dir
-./bin 
-./objs 
+bin 
+objs 
+
+#docfile
+Doxyfile
 
 # Executables
 *.exe
