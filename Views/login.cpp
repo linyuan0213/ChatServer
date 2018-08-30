@@ -2,6 +2,8 @@
 
 #include "login.h"
 #include "../Model/sql.h"
+#include "../Log/log.h"
+
 #include <iostream>
 #include <cryptopp/hex.h>
 #include <cryptopp/osrng.h>
@@ -49,6 +51,7 @@ std::string Login::process(std::string root)
     {
 
         std::cout << mysql.error_num << " : " << mysql.error_info << std::endl;
+		LOGERROR("mysql open error:%s, errorno: %d", mysql.error_info, mysql.error_num);
 
     }
 
@@ -64,8 +67,8 @@ std::string Login::process(std::string root)
             json_return["reason_type"] = TYPE_LOGIN;
             json_return["status"] = "ok";
             return json_return.toStyledString();
-        }
-    }
+         }
+     }
 
     json_return["reason_type"] = TYPE_LOGIN;
     json_return["status"] = "error";
@@ -78,7 +81,7 @@ std::string Login::process(std::string root)
 /// \param status 接收process返回状态
 /// \return 返回状态给客户端
 std::string Login::response(std::string status)
-{
+{ 
     return status;
 }
 
@@ -94,7 +97,7 @@ std::string Login::MD5(const char * message)
 
     std::transform(digest.begin(), digest.end(), digest.begin(), ::tolower);
     return digest;
-}
+} 
 
 Login::Login()
 {

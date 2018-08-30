@@ -1,9 +1,5 @@
-//
-// Created by robin on 18-8-14.
-//
-
 #include "addfriend.h"
-
+#include "../Log/log.h"
 /// \brief  将添加好友插入数据库,ispassed为0
 /// \param root 用户和要添加的好友
 /// \return 返回json包
@@ -47,8 +43,8 @@ std::string AddFriend::process(std::string root)
     if (!mysql.open())
     {
 
-        std::cout << mysql.error_num << " : " << mysql.error_info << std::endl;
-
+        std::cerr << mysql.error_num << " : " << mysql.error_info << std::endl;
+		LOGERROR("mysql open error:%s, errorno: %d", mysql.error_info, mysql.error_num);
     }
 
     char buf[2048];

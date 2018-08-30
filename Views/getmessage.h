@@ -39,7 +39,5 @@ class GetMessage : public View
     std::string process(std::string root) override ;
     std::string response(std::string status) override ;
 
-    static int max_diif(std::vector<long> &arr);
-    static long metis_strptime(const char *str_time);
 };
 #endif //CHATSERVER_GETMESSAGE_H

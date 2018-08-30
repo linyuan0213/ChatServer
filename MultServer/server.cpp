@@ -4,6 +4,8 @@
 
 #include "server.h"
 #include "threadpool.h"
+#include "../Log/log.h"
+
 ///
 /// \brief 初始化LibeventThread
 /// \param count 连接池大小
@@ -43,13 +45,13 @@ CoreServer::~CoreServer()
     delete m_main_base;
     delete [] m_threads;
     delete pool;
-}
+ }
 
 ///
 /// \brief 设置端口
 /// \param port 端口号
 void CoreServer::set_port(int port)
-{
+{ 
     m_port = port;
 }
 
@@ -57,7 +59,7 @@ void CoreServer::set_port(int port)
 /// \brief 初始化线程,将管道加入event监听
 /// \param me LibeventThread 指针
 void CoreServer::init_thread(LibeventThread *me)
-{
+{ 
     int res;
 
     //建立libevent事件处理机制
@@ -72,7 +74,7 @@ void CoreServer::init_thread(LibeventThread *me)
     {
         perror("socketpair");
         exit(1);
-     } 
+      } 
 
     me->notify_receive_fd = fds[0];
     me->notify_send_fd    = fds[1];
@@ -95,11 +97,13 @@ void *CoreServer::worker_thread(void *arg)
     auto *me = static_cast<LibeventThread *>(arg);
     me->tid = pthread_self();
     std::cout << "thread " << me->tid << " start..." << std::endl;
+	LOGINFO("thread %ld start...", me->tid);
     event_base_dispatch(me->base);
     std::cout << "subthread done" << std::endl;
+	LOGINFO("subthread done");
 
     return nullptr;
-}
+} 
 
 ///
 /// \brief 开始监听, 有客户端连接,通知子线程,子线程工作
@@ -116,7 +120,7 @@ void CoreServer::start_run()
         sin.sin_family = AF_INET;
         sin.sin_port = htons(static_cast<uint16_t>(m_port));
         std::cout << "start listen..." << std::endl;
-
+		LOGINFO("start listen...");
         //监听并绑定,掉用户调函数,on_listen
         listener = evconnlistener_new_bind(m_main_base->base,
                                            on_listen, (void *) this,
@@ -125,6 +129,7 @@ void CoreServer::start_run()
         if(nullptr == listener )
         {  
             std::cerr << "listen error " << strerror(errno) << std::endl;
+			LOGINFO("listen error: %s", strerror(errno));
             exit(1);
          }
     }  
@@ -143,6 +148,7 @@ void CoreServer::start_run()
     if( m_port != EXIT_CODE )
     { 
         std::cout << "release listen" << std::endl;
+		LOGINFO("release listen");
         evconnlistener_free(listener);
     }  
 
@@ -213,6 +219,7 @@ void CoreServer::thread_process(int fd, short which, void *arg)
     if (!bev)
     {   
         std::cerr << "Error constructing bufferevent!" << std::endl;
+		LOGERROR("Error constructing bufferevent!");
         event_base_loopbreak(me->base);
         return;
     }

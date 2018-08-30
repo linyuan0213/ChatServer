@@ -2,6 +2,7 @@
 #include "chatserver.h"
 #include <json/json.h>
 #include "../Control/process.h"
+#include "../Log/log.h"
 
 #define  __DEBUG_ 
 ///
@@ -14,12 +15,13 @@ void TestServer::read_cb(Conn *conn)
     char buf[1024];
     std::string res;
     memset(buf, 0, sizeof(buf));
-
+	
     //获取缓冲区数据
     conn->get_read_buffer(buf, sizeof(buf));
 #ifdef __DEBUG_ 
 	std::cout << "recv: " << std::endl;
 	std::cout << buf << std::endl;
+	LOGINFO("recv:\n %s", buf);
 #endif
     //处理接收的数据
     Process process;
@@ -28,9 +30,21 @@ void TestServer::read_cb(Conn *conn)
 #ifdef __DEBUG_ 
 	std::cout << "send: " << std::endl;
 	std::cout << res << std::endl;
+	LOGINFO("send:\n %s", res.c_str());
 #endif
     memset(buf, 0, sizeof(buf));
     strncpy(buf, res.c_str(), res.length());
+
+	// 判断消息是否为空,为空则丢弃
+	Json::Value json;
+    Json::CharReaderBuilder builder;
+    Json::CharReader *reader = builder.newCharReader();
+    JSONCPP_STRING err;
+    if (!reader->parse(buf, buf + strlen(buf), &json, &err))
+        return;
+	if (json["message"] == 0 && json["status"] == "ok")
+		return;
+
     conn->add_to_write_buffer(buf, strlen(buf));
 }
 
@@ -50,8 +64,9 @@ void TestServer::write_cb(Conn *conn)
 void TestServer::connect_cb(Conn *conn)
 {
     //获取连接文件描述符
-    TestServer *me = dynamic_cast<TestServer *>(conn->get_thread()->p_tcp_conn);
+    //TestServer *me = dynamic_cast<TestServer *>(conn->get_thread()->p_tcp_conn);
     std::cout << "new connection " << conn->get_fd() << std::endl;
+	LOGINFO("new connection: %d", conn->get_fd());
 }
 
 ///
@@ -60,12 +75,18 @@ void TestServer::connect_cb(Conn *conn)
 /// \param events 客户端断开事件
 void TestServer::close_cb(Conn *conn, short events)
 {
-    TestServer *me = dynamic_cast<TestServer *>(conn->get_thread()->p_tcp_conn);
+    //TestServer *me = dynamic_cast<TestServer *>(conn->get_thread()->p_tcp_conn);
     //判断是否正常退出
     if (events & BEV_EVENT_EOF)
+	{
         std::cout << "connection closed " << conn->get_fd() <<std::endl;
+		LOGINFO("connection closed: %d", conn->get_fd());
+	}
     else if (events & BEV_EVENT_ERROR)
+	{
         std::cerr << "some other error" <<std::endl;
+		LOGERROR("some other error");
+	}
 }
 
 ///
@@ -87,6 +108,7 @@ TestServer::~TestServer()
 void TestServer::quit_cb(int sig, short events, void *data)
 {
     std::cout << "Catch the SIGINT signal, quit in one second" << std::endl;
+	LOGINFO("Catch the SIGINT signal, quit in one second")
     //获取this指针数据
     auto *me = static_cast<TestServer*>(data);
     timeval tv = {1, 0};

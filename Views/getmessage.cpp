@@ -1,4 +1,5 @@
 #include "getmessage.h"
+#include "../Log/log.h"
 
 /// \brief  从数据库获取聊天信息发送给返回json包
 /// \param root 接收者和发送者信息
@@ -44,6 +45,8 @@ std::string GetMessage::process(std::string root)
     {
 
         std::cout << mysql.error_num << " : " << mysql.error_info << std::endl;
+
+		LOGERROR("mysql open error:%s, errorno: %d", mysql.error_info, mysql.error_num);
 
     }
 
@@ -122,37 +125,3 @@ std::string GetMessage::response(std::string status)
     return status;
 }
 
-/// \brief 比较排序后相邻时间的最大值
-/// \param arr 排序好的数组
-/// \return 返回超过120s的下标
-int GetMessage::max_diif(std::vector<long> &arr)
-{
-    if (arr.empty())
-        return 0;
-    int index = 0;
-    long max = 0;
-    for (long i = 1; i < static_cast<long>(arr.size()); i++)
-    {
-        auto diff = arr.at(i - 1) - arr.at(i);
-        if (diff > max )
-        {
-            max = diff;
-            index = static_cast<int>(i -1);
-            if (max > 120)
-                return index;
-        }
-    }
-	
-	return index;
-}
-
-/// \brief 时间转时间戳
-/// \param str_time 时间字符串
-/// \return 时间戳
-long GetMessage::metis_strptime(const char *str_time)
-{
-    struct tm stm;
-    strptime(str_time, "%Y-%m-%d %H:%M:%S",&stm);
-    long t = mktime(&stm);
-    return t;
-}

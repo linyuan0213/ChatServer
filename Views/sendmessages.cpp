@@ -3,6 +3,7 @@
 //
 
 #include "sendmessages.h"
+#include "../Log/log.h"
 
 /// \brief 将客户端发送信息插入数据库
 /// \param root 接收者和发送者信息
@@ -51,7 +52,7 @@ std::string SendMessage::process(std::string root)
     {
 
         std::cout << mysql.error_num << " : " << mysql.error_info << std::endl;
-
+		LOGERROR("mysql open error:%s, errorno: %d", mysql.error_info, mysql.error_num);
     }
 
     char buf[2048];
@@ -68,14 +69,14 @@ std::string SendMessage::process(std::string root)
         json_return["status"] = "error";
         json_return["message"] = "查询数据失败";
         return json_return.toStyledString();
-    }
+    } 
 
     if (data.empty())
     {
         json_return["status"] = "error";
         json_return["message"] = "发送用户不存在";
         return json_return.toStyledString();
-    }
+    } 
 
     memset(buf, 0, sizeof(buf));
     query_str.clear();
@@ -90,7 +91,7 @@ std::string SendMessage::process(std::string root)
         json_return["status"] = "error";
         json_return["message"] = "插入数据失败";
         return json_return.toStyledString();
-    }
+    } 
 	
 
 	// 添加信息标志位,判断信息是否被接收
@@ -104,7 +105,7 @@ std::string SendMessage::process(std::string root)
         json_return["status"] = "error";
         json_return["message"] = "查询数据失败";
         return json_return.toStyledString();
-	}
+	} 
 
     sprintf(buf, "INSERT INTO messages_flg (message_id, isreceived) "
                  "VALUE (%s, %d)", data[0][0].c_str() , 0
@@ -116,7 +117,7 @@ std::string SendMessage::process(std::string root)
         json_return["status"] = "error";
         json_return["message"] = "插入数据失败";
         return json_return.toStyledString();
-    }
+    } 
 
     json_return["status"] = "ok";
 
@@ -127,6 +128,6 @@ std::string SendMessage::process(std::string root)
 /// \param status 接收process返回状态
 /// \return 返回状态给客户端
 std::string SendMessage::response(std::string status)
-{
+{ 
     return status;
 }

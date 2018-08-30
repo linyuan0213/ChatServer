@@ -1,4 +1,5 @@
 #include "handlefriendrequest.h"
+#include "../Log/log.h"
 
 /// \brief  将好友列ispassed为1, 用户添加好友
 /// \param root 用户和要添加的好友
@@ -44,6 +45,7 @@ std::string HnadleRequest::process(std::string root)
     {
 
         std::cout << mysql.error_num << " : " << mysql.error_info << std::endl;
+		LOGERROR("mysql open error:%s, errorno: %d", mysql.error_info, mysql.error_num);
 
     }
 

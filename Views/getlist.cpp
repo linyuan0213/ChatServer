@@ -3,6 +3,7 @@
 //
 
 #include "getlist.h"
+#include "../Log/log.h"
 
 GetList::GetList()
 {
@@ -60,7 +61,7 @@ std::string GetList::process(std::string root)
     {
 
         std::cout << mysql.error_num << " : " << mysql.error_info << std::endl;
-
+		LOGERROR("mysql open error:%s, errorno: %d", mysql.error_info, mysql.error_num);
     } 
 
     // 读取数据

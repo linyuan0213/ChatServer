@@ -3,6 +3,7 @@
 //
 
 #include "register.h"
+#include "../Log/log.h"
 
 Register::Register()
 {
@@ -57,6 +58,7 @@ std::string Register::process(std::string root)
     {
 
         std::cout << mysql.error_num << " : " << mysql.error_info << std::endl;
+		LOGERROR("mysql open error:%s, errorno: %d", mysql.error_info, mysql.error_num);
 
     }
 
@@ -96,8 +98,6 @@ std::string Register::process(std::string root)
 /// \return 返回状态给客户端
 std::string Register::response(std::string status)
 {
-    if (status == "ok")
-        return "ok";
     return status;
 }
 

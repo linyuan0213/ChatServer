@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "sql.h"
+#include "../Log/log.h"
 
 ///
 /// \brief 构造函数,初始化error_num和error_info
@@ -158,6 +159,7 @@ void Sql::error_message()
     error_num = mysql_errno(&mysql_instance);
     error_info = mysql_error(&mysql_instance);
     std::cerr << "error_info" << error_info << std::endl;
+	LOGERROR("error_info: %s, error_num: %d", error_info, error_num);
 }
 
 
