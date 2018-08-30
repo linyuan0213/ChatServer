@@ -26,6 +26,10 @@
 *.a
 *.lib
 
+#log
+
+ChatLog/*.*
+
 #dir
 bin 
 objs 
