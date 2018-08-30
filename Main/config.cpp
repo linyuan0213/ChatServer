@@ -2,6 +2,7 @@
 #include <cstdlib>  
 #include <cstring>  
 #include <map>
+#include "../Log/log.h"
   
 #define MAX_BUF_LEN 1024  
 #define MAX_KEY_LEN 64  
@@ -31,7 +32,6 @@ int load_config(const char* config_path, std::map<std::string, std::string>& map
 		fprintf(stderr, "[Error]open %s failed.\n", config_path);  
         return -1;  
     }  
-  
   
     char buf[MAX_BUF_LEN];  
     int text_comment = 0;  

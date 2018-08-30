@@ -9,38 +9,59 @@
 
 #include <iostream>
 #include <memory>
+
+#include <unistd.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <fcntl.h>
+
 #include "../Model/sql.h"
 #include "../Views/login.h"
 #include "../Views/register.h"
 #include "../Control/process.h"
 #include "../MultServer/server.h"
 #include "../MultServer/chatserver.h"
+#include "../Log/log.h"
 #include "config.h"
 
-#define __DEBUG_ 
-int main()
+#define __DEBUG_
+
+
+int daemon();
+
+int main(int argc, char *argv[])
 {
 	int worker = 0;
 	short port = 0;
 	std::map<std::string, std::string> conf;
+	char log_file[100];
+	memset(log_file, 0, sizeof(log_file));
 
 	//配置文件在bin目录下
-	load_config("./chat.conf", conf);
+	load_config("../Main/chat.conf", conf);
 	for (auto &i : conf)
 	{
 		if (i.first == "worker")
 			worker = atoi(i.second.c_str());
 		if (i.first == "port")
 			port = atoi(i.second.c_str());
-	}
+		if (i.first == "log_file")
+			strncpy(log_file, i.second.c_str(), i.second.length());
+	} 
+	
+	//初始化日志
+	LOGINIT(argv[0], log_file);
+	daemon();
 #ifdef __DEBUG_
 
 	std::cout << "worker:" << worker << std::endl;
 	std::cout << "port:" << port << std::endl;	
+	LOGINFO("worker: %d", worker);
+	LOGINFO("port: %d", port);
 
     std::cout << "pid: " << getpid() << std::endl;
+	LOGINFO("pid: %d", getpid());
 #endif 
-
     TestServer server(worker);
     server.add_signal_event(SIGINT, TestServer::quit_cb);
     //timeva.addl tv = {1, 0};
@@ -49,6 +70,7 @@ int main()
     server.start_run();
 #ifdef __DEBUG_ 
     std::cout << "done" << std::endl;
+	LOGINFO("done");
 #endif 
     return 0;
  
@@ -68,6 +90,32 @@ int main()
     return 0;
 
 }
+
+int daemon()
+{
+	pid_t pid = fork();
+	if (pid != 0)
+		exit(0);
+
+	if (setsid() == -1)
+	{
+		assert(0);
+		exit(-1);
+	}
+	umask(0);
+
+	pid = fork();
+	if (pid != 0)
+		exit(0);
+	chdir("/");
+	close(STDIN_FILENO);
+
+	int fd = open("/dev/null", O_RDWR);
+	dup2(fd, STDOUT_FILENO);
+	dup2(fd, STDERR_FILENO);
+	return 0;
+}
+
 
 /*
 void test1()
