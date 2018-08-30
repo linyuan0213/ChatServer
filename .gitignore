@@ -26,9 +26,8 @@
 *.a
 *.lib
 
-#log
-
-ChatLog/*.*
+#log 
+ChatLog/*
 
 #dir
 bin 
