@@ -91,8 +91,35 @@ std::string SendMessage::process(std::string root)
         json_return["message"] = "插入数据失败";
         return json_return.toStyledString();
     }
+	
+
+	// 添加信息标志位,判断信息是否被接收
+	memset(buf, 0, sizeof(buf));
+	sprintf(buf, "SELECT id FROM messages ORDER BY id DESC LIMIT 1");
+	query_str = buf;
+	data.clear();
+	if (mysql.select(query_str, data) == 0)
+	{
+        std::cerr << "mysql select error" << std::endl;
+        json_return["status"] = "error";
+        json_return["message"] = "查询数据失败";
+        return json_return.toStyledString();
+	}
+
+    sprintf(buf, "INSERT INTO messages_flg (message_id, isreceived) "
+                 "VALUE (%s, %d)", data[0][0].c_str() , 0
+            );
+    query_str = buf;
+    if (mysql.query(query_str) == 0)
+    {
+        std::cerr << "error num:" << mysql.error_num << std::endl;
+        json_return["status"] = "error";
+        json_return["message"] = "插入数据失败";
+        return json_return.toStyledString();
+    }
 
     json_return["status"] = "ok";
+
     return json_return.toStyledString();
 }
 

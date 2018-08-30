@@ -1,7 +1,3 @@
-//
-// Created by robin on 18-8-13.
-//
-
 #include "getmessage.h"
 
 /// \brief  从数据库获取聊天信息发送给返回json包
@@ -11,7 +7,6 @@ std::string GetMessage::process(std::string root)
 {
     //接收者 user Tom
     //root["classify"] = 1
-    //root["sender"] = John
     //root["receiver"] = Tom
     if(root.empty())
         return nullptr;
@@ -23,18 +18,19 @@ std::string GetMessage::process(std::string root)
     Json::Value json_return;
     json_return.clear();
     json_return["reason_type"] = TYPE_GET_MESSAGE;
-
+	json_return["status"] = "ok";
+	json_return["message"] = '\0';
     Json::CharReaderBuilder builder;
     Json::CharReader *reader = builder.newCharReader();
     JSONCPP_STRING err;
     if (!reader->parse(root.data(), root.data() + root.size(), &json_root, &err))
         return nullptr;
 
-    std::string sender = json_root["sender"].asString();
+    //std::string sender = json_root["sender"].asString();
     std::string receiver = json_root["receiver"].asString();
-    int classify = json_root["classify"].asInt();
+    //int classify = json_root["classify"].asInt();
 
-    if (sender.empty() || receiver.empty())
+    if (receiver.empty())
     {
         json_return["status"] = "error";
         json_return["message"] = "接受信息失败";
@@ -55,8 +51,8 @@ std::string GetMessage::process(std::string root)
     std::string query_str;
     memset(buf, 0, sizeof(buf));
     //验证
-    sprintf(buf, "SELECT friendname FROM friends WHERE friendname = '%s' AND fname = '%s'",
-            receiver.c_str(), sender.c_str());
+    sprintf(buf, "SELECT friendname FROM friends WHERE friendname = '%s'",
+            receiver.c_str());
     query_str = buf;
     std::vector<std::vector<std::string> > data;
     if (mysql.select(query_str, data) == 0)
@@ -68,7 +64,7 @@ std::string GetMessage::process(std::string root)
     }
 
     if (data.empty())
-    {
+    { 
         json_return["status"] = "error";
         json_return["message"] = "用户不存在";
         return json_return.toStyledString();
@@ -78,9 +74,9 @@ std::string GetMessage::process(std::string root)
     query_str.clear();
 
     //获取发送给receiver的信息
-    sprintf(buf, "SELECT sender, message, sendtime FROM messages WHERE "
-                 "classify = %d AND sender = '%s' AND receiver = '%s' ORDER BY id DESC LIMIT 5",
-            classify, sender.c_str(), receiver.c_str());
+	//SELECT * FROM messages m_a INNER JOIN (SELECT message_id FROM messages_flg WHERE isreceived = FALSE) AS m_b ON m_b.message_id = m_a.id AND m_a.receiver = 'Tom'
+    sprintf(buf, "SELECT sender, message, sendtime FROM messages m_a INNER JOIN (SELECT message_id FROM messages_flg WHERE isreceived = %d) AS m_b ON m_b.message_id = m_a.id AND m_a.receiver = '%s'",
+            0, receiver.c_str());
     query_str = buf;
     data.clear();
     if (mysql.select(query_str, data) == 0)
@@ -89,32 +85,31 @@ std::string GetMessage::process(std::string root)
         json_return["status"] = "error";
         json_return["message"] = "查找用户失败";
         return json_return.toStyledString();
-    }
-
-    std::vector<long> timestamp;
-    for(auto& i : data)
+    }  
+	Json::Value message_json;
+	message_json.clear();
+	
+    for (int j = 0; j < static_cast<int>(data.size()); j++)
     {
-        timestamp.push_back(metis_strptime(i[2].c_str()));
-    }
-
-    int index = max_diif(timestamp);
-    for (auto i : timestamp)
-    {
-        std::cout << i << std::endl;
-    }
-    std::cout << "index " << index << std::endl;
-    //int i = 0;
-    for (int j = 0; j < data.size(); ++j)
-    {
-        json_return["sender"] = data[j][0];
-        json_return["message"][index] = data[j][1];
-        json_return["sendtime"][index] = data[j][2];
-
-        if (index == 0)
-            break;
-        index--;
-    }
-
+		message_json[data[j][0]]["message"][j] = data[j][1];
+		message_json[data[j][0]]["time"][j] = data[j][2];
+		message_json[data[j][0]]["isreceived"] = true;
+		json_return["message"] = message_json;
+    } 
+	
+	//将消息标志位置1,表示已经接收 
+	memset(buf, 0, sizeof(buf));
+	sprintf(buf, "UPDATE messages_flg m_c INNER JOIN (SELECT id FROM messages WHERE receiver = '%s') AS m_b ON m_b.id = m_c.message_id SET isreceived = TRUE", receiver.c_str());
+	query_str = buf;
+	if (mysql.query(query_str) == 0)
+	{
+		std::cerr << "mysql select error" << std::endl;
+		json_return["status"] = "error";
+		json_return["message"] = "修改数据失败";
+		return json_return.toStyledString();
+	} 
+		
+	
     return json_return.toStyledString();
 
 }
@@ -136,7 +131,7 @@ int GetMessage::max_diif(std::vector<long> &arr)
         return 0;
     int index = 0;
     long max = 0;
-    for (long i = 1; i < arr.size(); i++)
+    for (long i = 1; i < static_cast<long>(arr.size()); i++)
     {
         auto diff = arr.at(i - 1) - arr.at(i);
         if (diff > max )
@@ -147,7 +142,8 @@ int GetMessage::max_diif(std::vector<long> &arr)
                 return index;
         }
     }
-
+	
+	return index;
 }
 
 /// \brief 时间转时间戳

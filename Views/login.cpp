@@ -31,7 +31,7 @@ std::string Login::process(std::string root)
         return nullptr;
 
     std::string username = json_root["username"].asString();
-    std::string passwd   = json_root["passwd"].asString();
+    std::string passwd   = json_root["password"].asString();
     if (username.empty() || passwd.empty())
     {
         json_return["reason_type"] = TYPE_LOGIN;
