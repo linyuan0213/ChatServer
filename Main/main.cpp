@@ -15,20 +15,43 @@
 #include "../Control/process.h"
 #include "../MultServer/server.h"
 #include "../MultServer/chatserver.h"
+#include "config.h"
+
+#define __DEBUG_ 
 int main()
 {
+	int worker = 0;
+	short port = 0;
+	std::map<std::string, std::string> conf;
 
+	//配置文件在bin目录下
+	load_config("./chat.conf", conf);
+	for (auto &i : conf)
+	{
+		if (i.first == "worker")
+			worker = atoi(i.second.c_str());
+		if (i.first == "port")
+			port = atoi(i.second.c_str());
+	}
+#ifdef __DEBUG_
+
+	std::cout << "worker:" << worker << std::endl;
+	std::cout << "port:" << port << std::endl;	
 
     std::cout << "pid: " << getpid() << std::endl;
-    TestServer server(5);
-    server.add_signal_event(SIGINT, TestServer::quit_cb);
-    timeval tv = {1, 0};
-    //server.add_timer_event(TestServer::timeout_cb, tv, false);
-    server.set_port(9999);
-    server.start_run();
-    std::cout << "done" << std::endl;
-    return 0;
+#endif 
 
+    TestServer server(worker);
+    server.add_signal_event(SIGINT, TestServer::quit_cb);
+    //timeva.addl tv = {1, 0};
+    //server.add_timer_event(TestServer::timeout_cb, tv, false);
+    server.set_port(port);
+    server.start_run();
+#ifdef __DEBUG_ 
+    std::cout << "done" << std::endl;
+#endif 
+    return 0;
+ 
 
     /*
     Json::Value root;
