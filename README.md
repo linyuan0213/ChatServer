@@ -4,15 +4,15 @@
 
 需要安装的依赖
 
-	[libevent](https://github.com/libevent/libevent) 
+[libevent](https://github.com/libevent/libevent) 
 
-	[jsoncpp](https://github.com/open-source-parsers/jsoncpp)
+[jsoncpp](https://github.com/open-source-parsers/jsoncpp)
 
-	[glog](https://github.com/google/glog)
+[glog](https://github.com/google/glog)
 
-	[Crypto++](https://github.com/weidai11/cryptopp)
+[Crypto++](https://github.com/weidai11/cryptopp)
 
-	[libmysqlclient](https://dev.mysql.com/downloads/connector/cpp/)
+[libmysqlclient](https://dev.mysql.com/downloads/connector/cpp/)
 
 使用方法:
 
