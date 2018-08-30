@@ -4,8 +4,22 @@
 
 使用方法:
 
-​	make 
+	先创建四张数据库表
 
-​	cd bin
+		users,messages,messages_flg,friends
 
-​	./test
+	将Main目录下的配置文件复制到bin目录下
+
+	make 
+
+	cd bin
+
+	./test
+
+
+
+配置文件包括:
+
+	线程数: worker
+
+	端口号: port
