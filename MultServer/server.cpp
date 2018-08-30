@@ -217,14 +217,14 @@ void CoreServer::thread_process(int fd, short which, void *arg)
         return;
     }
 
-    std::cout << "confd " << confd << std::endl;
+    //std::cout << "confd " << confd << std::endl;
     //将该链接放入队列
     auto *tmp = new Conn(confd);
     tmp->m_thread = me;
     me->conn.push_front(tmp);
     //准备从socket中读写数据
-    std::cout << "conn size " << me->conn.size() << std::endl;
-    std::cout << "conn first " << me->conn.front()->m_fd << std::endl;
+    //std::cout << "conn size " << me->conn.size() << std::endl;
+    //std::cout << "conn first " << me->conn.front()->m_fd << std::endl;
     bufferevent_setcb(bev, on_read, on_write, on_close, me->conn.front());
     bufferevent_enable(bev, EV_WRITE);
     bufferevent_enable(bev, EV_READ);
@@ -269,7 +269,7 @@ void CoreServer::on_close(struct bufferevent *bev, short events, void *data)
     auto *conn = static_cast<Conn*>(data);
     //调用用户自定义的断开事件处理函数
     conn->m_thread->p_tcp_conn->close_cb(conn, events);
-    std::cout << conn->m_thread->conn.front()->m_fd << std::endl;
+    //std::cout << conn->m_thread->conn.front()->m_fd << std::endl;
     delete conn->m_thread->conn.front();
     conn->m_thread->conn.pop_front();
     bufferevent_free(bev);

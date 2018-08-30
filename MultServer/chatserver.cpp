@@ -3,6 +3,7 @@
 #include <json/json.h>
 #include "../Control/process.h"
 
+#define  __DEBUG_ 
 ///
 /// \brief 读取客户端发送信息,处理后,发送给客户端
 /// \param conn 客户端连接信息
@@ -16,10 +17,18 @@ void TestServer::read_cb(Conn *conn)
 
     //获取缓冲区数据
     conn->get_read_buffer(buf, sizeof(buf));
-
+#ifdef __DEBUG_ 
+	std::cout << "recv: " << std::endl;
+	std::cout << buf << std::endl;
+#endif
     //处理接收的数据
     Process process;
     res = process.handle(buf);
+
+#ifdef __DEBUG_ 
+	std::cout << "send: " << std::endl;
+	std::cout << res << std::endl;
+#endif
     memset(buf, 0, sizeof(buf));
     strncpy(buf, res.c_str(), res.length());
     conn->add_to_write_buffer(buf, strlen(buf));
