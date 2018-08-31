@@ -33,6 +33,7 @@ int main(int argc, char *argv[])
 {
 	int worker = 0;
 	short port = 0;
+	bool daemonize = false;
 	std::map<std::string, std::string> conf;
 	char log_file[100];
 	memset(log_file, 0, sizeof(log_file));
@@ -47,11 +48,17 @@ int main(int argc, char *argv[])
 			port = atoi(i.second.c_str());
 		if (i.first == "log_file")
 			strncpy(log_file, i.second.c_str(), i.second.length());
+		if (i.first == "daemonize")
+			daemonize = atoi(i.second.c_str());
 	} 
-	
+	if (daemonize)
+		daemon();
+
 	//初始化日志
 	LOGINIT(argv[0], log_file);
-	daemon();
+	if (daemonize)
+		LOGINFO("daemonize");
+
 #ifdef __DEBUG_
 
 	std::cout << "worker:" << worker << std::endl;

@@ -36,4 +36,6 @@
 	
 	端口号: port
 	
+	守护进程: daemonize
+	
 	日志文件: log_file
